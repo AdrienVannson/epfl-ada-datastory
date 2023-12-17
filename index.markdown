@@ -1,6 +1,6 @@
 ---
-layout: page
-title: Behind the Scenes of Stardom: Decoding the Patterns in Actors' Careers
+layout: post
+title: "Behind the Scenes of Stardom: Decoding the Patterns in Actors' Careers"
 permalink: /
 ---
 
