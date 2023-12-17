@@ -23,7 +23,7 @@ If you're eager to peek at the profile sequences of your cherished actor,  you c
 
 Now that we've gathered these profile sequences, let's dive into the realm of clustering to uncover trends in acting. Using the Silhouette score, we've identified two major clusters in the profile sequences. Check out the medoids and centroids – do you see what I see?
 
-[Insert here medoids and centroids of clusters] 
+{% include career-all-actors-clusters.html %}
 
 One cluster is filled with actors who dipped their toes into the film world with only a handful of movies in their early career before bowing out, while the second cluster boasts actors with long, illustrious careers, gracing the screen with numerous movies.
 
