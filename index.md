@@ -69,7 +69,7 @@ First up, we're curious about the age when actors kick off their cinematic journ
 
 Breaking it down by gender, we spot some disparities: around 32 for men and 26 for women. Intriguing, right? Let's bring back our trusty tool, the t-test, to confirm the statistical significance. And voila, the p-value makes it official – this difference is indeed statistically significant. But why? Is it because the industry tends to favor younger women?
 
-[Insert distribution by gender]
+{% include career-age-first-appearance.html %}
 
 Next, let’s break it down by cluster:
 
