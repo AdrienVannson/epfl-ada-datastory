@@ -47,16 +47,16 @@ After a moment of silence, let’s swing back into clustering. Same method, Silh
 
 Hold onto your seats! There are some intriguing differences, my friends.
 
-Cluster 0: Steady Builders
+ - Cluster 0: *Steady Builders*.
 Here, we have our steady career builders. These individuals take their sweet time, adopting a patient and persistent approach to construct their acting legacy. Their journey showcases a gradual but steady increase in movie engagements over an extended period, before gradually dissolving.
 
-Cluster 1: Unsuccessful career-builders
+ - Cluster 1: *Unsuccessful career-builders*.
 Once again, this is home to the non-successful folks who just couldn't take off. We get it; building a career is no easy feat. A few movies in, and it's a reluctant farewell.
 
-Cluster 2: Prolific Long-Term Performers
+ - Cluster 2: *Prolific Long-Term Performers*.
 Now, brace yourselves for the prolific long-term performers. This elite group features heavyweights, a small number of actors boasting a significant number of movies over almost 50 years. These individuals have held their ground in the movie industry across a considerable period.
 
-Cluster 3: Ephemeral Success with Progressive Fade
+ - Cluster 3: *Ephemeral Success with Progressive Fade*.
 Last but not least, we have the actors that burst onto the scene with a strong start, only to experience a progressive decline over approximately 20 years. It's a tale of ephemeral success followed by a gradual decrease in movie engagements. 
 
 Hold on, the plot thickens. Brace yourselves for a stark reality check – gender inequality is alive and kicking. A mere 9% of women in the Prolific Long-Term Performers, 17% in the Steady Builders, 32% for the Unsuccessful Career Builders and 34% for the Ephemeral Success with Progressive Fade. It's indeed a sobering moment for women in the industry. The battle for equal representation rages on.
