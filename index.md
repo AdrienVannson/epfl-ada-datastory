@@ -43,7 +43,7 @@ So, not only is the overall percentage of female actors lower than their male co
 
 After a moment of silence, let’s swing back into clustering. Same method, Silhouette score, 4 clusters. Now, let’s analyze the graph.
 
-[Insert here medoids and centroids of clusters]
+{% include career-best-actors-clusters.html %}
 
 Hold onto your seats! There are some intriguing differences, my friends.
 
