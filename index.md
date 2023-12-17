@@ -29,7 +29,7 @@ This somewhat validates the harsh reality: carving out a career in acting is no 
 
 And alas, the distribution of the number of movies per actor in the clusters confirms the somber truth – the first cluster predominantly consists of less successful actors. Indeed, in this cluster, around 14 thousand actors have taken part in fewer than 5 movies.
 
-[Insert here distribution of number of movies for each cluster]
+{% include career-all-actors-distribution.html %}
 
 My heart goes out to these individuals, but tough decisions must be made. We have to trim the cast, shifting our focus to actors with a more extensive career, and uncover underlying trends in those with at least 5 movies (come on, folks, it's not that much).
 
