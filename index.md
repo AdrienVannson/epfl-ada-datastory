@@ -10,8 +10,6 @@ How do you envision your career? We, as scientists, will probably spend a substa
 
 Usually, when you seek information about someone's career, you turn to LinkedIn. Would you do the same to stalk your childhood actor crush? Well, good news, we are here to do it for you. From the number of connections (actors they have collaborated with), to the potential genre specialization in movies, and not forgetting the prospect of winning an Oscar, let’s delve into the intricacies of our actors’ careers. 
 
-{% include graph.html %}
-
 # Career Characterization
 
 Let's kick off our journey into the fascinating world behind the scenes of stardom with an assessment of our beloved actors' career trajectories. To navigate this cinematic maze, we will need a clever approach to construct and compare their careers. Here's the plan: For each actor, we'll craft their profile sequence, showing the number of movies they've graced each year throughout their career.
