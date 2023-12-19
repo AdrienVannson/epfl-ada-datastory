@@ -16,8 +16,7 @@ Let's kick off our journey into the fascinating world behind the scenes of stard
 
 If you're eager to peek at the profile sequences of your cherished actor,  you can search for them here. But, brace yourself, you’ve got to be a fan of old-fashioned movies because, at this stage of our analysis, we're only considering actors for whom we have data spanning their entire career. So, our modern-day heartthrobs still in the thick of their cinematic adventures won't make the cut.
 
-[Insert here interactive graph where we can see profile sequence of chosen actor in a drop-down list]
-
+{% include career-all-actors-careers.html %}
 
 Now that we've gathered these profile sequences, let's dive into the realm of clustering to uncover trends in acting. Using the Silhouette score, we've identified two major clusters in the profile sequences. Check out the medoids and centroids – do you see what I see?
 
