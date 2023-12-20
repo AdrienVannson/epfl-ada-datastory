@@ -107,7 +107,7 @@ Each category features five nominees annually, totaling 20 acting nominations ea
 
 Now, with our newfound expertise in Oscars, let's dive into the first act of our Oscar journey. We're investigating whether an actor's gender may influence their career trajectory in terms of Oscar nominations and wins.
 
-[insert plot Distribution of Movies Before First Nomination by Actor Gender]
+{% include oscars-analysis-movies-before-first-nomination.html %}
 
 Glancing at the distribution of the number of movies before the first nomination, a subtle trend emerges: female actors often need fewer movies than their male counterparts to secure an Oscar nod. Moreover, formally testing this with the Mann-Whitney U test reveals indeed a statistical difference …
 
