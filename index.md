@@ -141,7 +141,7 @@ This age-related twist unveils a subtle but significant gender bias in the Oscar
 
 But, wait, until now, we have only looked at the aggregate distributions of actor ages and movie counts. However, our data spans almost a century since the inception of the Oscars. Let’s take advantage of that and explore that temporal dimension!
 
-[Insert plot: dernier plot de Michael, temporal truc]
+![Evolution of the age at first Oscar](/epfl-ada-datastory/images/oscars-analysis-age-oscar-evolution.png)
 
 While the age distribution for first-time Oscar winners spans wide, a consistent pattern emerges: male actors generally receive their first Oscar at a later age compared to their female counterparts. Over the decades, we can observe a discernible shift toward older winners, irrespective of gender. This shift may mirror a changing industry perspective that values experience and maturity. Such a shift aligns with the idea that roles with the depth and complexity to garner Oscar recognition are increasingly written for older characters.
 
