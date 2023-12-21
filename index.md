@@ -111,13 +111,13 @@ Glancing at the distribution of the number of movies before the first nomination
 
 But hold on, before our gentlemen break out the tissues screaming “gender bias”, let's not jump to conclusions. Let's pivot our gaze to the overall number of movies per gender. 
 
-[insert plot Number of movies per gender]
+![Number of movies per gender](/epfl-ada-datastory/images/oscars-analysis-total-movies.png)
 
 Interestingly, the data indicates that, on average, male actors appear in more films than their female counterparts, which is further reinforced by a second Mann-Whitney U test. This may contribute to a fiercer competition among male actors for those coveted Oscar nominations, considering the even playing field in annual nomination counts across gender-specific acting categories. 
 
 Next up on our Oscar exploration: the thrilling journey from nomination to victory. Let's take a peek at the distribution of the number of nominations before an actor clinches the coveted Oscar.
 
-[Insert plot: Distribution of Nominations Before First Oscar Win by Actor Gender]
+![Nominations before first Oscar](/epfl-ada-datastory/images/oscars-analysis-nominations-before-first-oscar.png)
 
 The histogram paints a picture of a comparably paced journey for both male and female actors. A quick U-test reassures us that there's no significant statistical difference between the two genders. But of course, this was expected, given that male and female actors compete in separate categories with an equal number of annual nominations.
 
