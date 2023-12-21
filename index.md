@@ -84,7 +84,7 @@ Once again, let’s check if there are some differences by gender with our trust
 
 Speaking of gender differences, can it also be that women are more stereotypically cast in certain movie genres? Let's embrace the cliché: women star in romance movies, while Westerns are supposedly for the rugged men. Well, prepare for a plot twist because, unfortunately, this is not just a cliché; it's the harsh reality. Below, you'll discover the gender breakdown for each genre that we've meticulously analyzed. And here's a fun fact for you: surprisingly, women are quite terrifyingly well-represented in horror films as well.
 
-[insert pie chart of genres by gender] 
+![Genre repartition per genres](/epfl-ada-datastory/images/genres-genre-repartition-per-genre.png)
 
 This was a small teaser for the continuation of our analysis. In this section, we will delve into how our beloved actors are scattered across the vast landscape of genres. Our preprocessing allowed us to unveil 26 main different genres in our dataset. Now, here's the twist—most movies find themselves embracing more than one genre, as you can see below.
 
