@@ -60,7 +60,19 @@
                     
                     <p>If you're eager to peek at the profile sequences of your cherished actor,  you can search for them here. But, brace yourself, you’ve got to be a fan of old-fashioned movies because, at this stage of our analysis, we're only considering actors for whom we have data spanning their entire career. So, our modern-day heartthrobs still in the thick of their cinematic adventures won't make the cut.</p>
                     
-                    <object type="text/html" data="/epfl-ada-datastory/graphs/career-all-actors-careers.html" width="100%" height="400px">
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">textsms</i>
+                                    <input type="text" id="autocomplete-input" class="autocomplete">
+                                    <label for="autocomplete-input">Autocomplete</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <object id="selected-actor-career" type="text/html" data="https://www.adrienvannson.fr/epfl-ada-datastory/graphs/profile-sequences/0bwh6.html" width="100%" height="400px">
                         <p>Unable to load the included file.</p>
                     </object>
                     
@@ -330,10 +342,48 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('.scrollspy');
-            var instances = M.ScrollSpy.init(elems, {});
-
+            M.ScrollSpy.init(document.querySelectorAll('.scrollspy'), {});
             M.Tabs.init(document.querySelectorAll('.tabs'), {});
+            
+            fetch("data.json")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Network response was not ok: ${response.statusText}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                autocompletion_data = data.map(d => {
+                    return {
+                        id: d.id,
+                        text: d.name
+                    };
+                });
+                
+                M.Autocomplete.init(document.querySelectorAll('.autocomplete'), {
+                    minLength: 1,
+                    data: autocompletion_data,
+                    onSearch: (text, autocomplete) => {
+                        const normSearch = text.toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+                        autocomplete.setMenuItems(
+                            autocomplete.options.data
+                                .filter((option) => option.text?.toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(normSearch))
+                                .slice(0, 10)
+                        );
+                    },
+                    onAutocomplete: e => {
+                        if (e.length) {
+                            var id = e[0].id;
+                            
+                            var elem = document.getElementById("selected-actor-career");
+                            elem.setAttribute("data", "https://www.adrienvannson.fr/epfl-ada-datastory/graphs/profile-sequences/" + id + ".html")
+                        }
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
         });
     </script>
 </body>
