@@ -125,7 +125,7 @@ On more of a side note, we can notice that this distribution follows a seemingly
 
 Next up, after exploring the number of movies before a nomination and the number of nominations before the first Oscar win, let's unravel the narrative with the number of movies before the first Oscar win.
 
-[Insert plot: Distribution of Movies Before First Oscar Win by Actor Gender]
+{% include oscars-analysis-movies-before-first-oscar.html %}
 
 So, the median number of movies stands at 17 for male actors and 11 for their female counterparts, suggesting a distinct pace in reaching the pinnacle of their careers. The U-test outcome adds weight to this observation, with a p-value below the 0.05 significance threshold. This pattern aligns with our earlier findings—female actors tend to nab nominations and wins earlier in their careers compared to their male counterparts, who face more competition and a longer journey to that elusive first Oscar victory. 
 
