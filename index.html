@@ -143,86 +143,89 @@
                 <div id="genre-exploration" class="section scrollspy">
                     <h2>Genres Exploration</h2>
                     
-                    Speaking of gender differences, can it also be that women are more stereotypically cast in certain movie genres? Let's embrace the cliché: women star in romance movies, while Westerns are supposedly for the rugged men. Well, prepare for a plot twist because, unfortunately, this is not just a cliché; it's the harsh reality. Below, you'll discover the gender breakdown for each genre that we've meticulously analyzed. And here's a fun fact for you: surprisingly, women are quite terrifyingly well-represented in horror films as well.
+                    <p>Speaking of gender differences, can it also be that women are more stereotypically cast in certain movie genres? Let's embrace the cliché: women star in romance movies, while Westerns are supposedly for the rugged men. Well, prepare for a plot twist because, unfortunately, this is not just a cliché; it's the harsh reality. Below, you'll discover the gender breakdown for each genre that we've meticulously analyzed. And here's a fun fact for you: surprisingly, women are quite terrifyingly well-represented in horror films as well.</p>
                     
                     [insert pie chart of genres by gender] 
                     
-                    This was a small teaser for the continuation of our analysis. In this section, we will delve into how our beloved actors are scattered across the vast landscape of genres. Our preprocessing allowed us to unveil 26 main different genres in our dataset. Now, here's the twist—most movies find themselves embracing more than one genre, as you can see below.
+                    <p>This was a small teaser for the continuation of our analysis. In this section, we will delve into how our beloved actors are scattered across the vast landscape of genres. Our preprocessing allowed us to unveil 26 main different genres in our dataset. Now, here's the twist—most movies find themselves embracing more than one genre, as you can see below.</p>
+
+                    <img class="responsive-img" alt="Distribution of the number of genres per film" src="/epfl-ada-datastory/images/genres-number-of-genres-distribution.png">
                     
-                    ![Distribution of the number of genres per film](/epfl-ada-datastory/images/genres-number-of-genres-distribution.png)
+                    <p>Therefore, for a more detailed picture, let’s start by exploring which of those 26 genres often go hand in hand. For each genre, the heatmap below showcases the probability of being associated with another genre in the corresponding column. The diagonal indicates the likelihood of being the sole genre present in the movie. Interestingly, most genres are frequently linked to the Drama genre, the undisputed champion in our dataset - around 50% of the movies are in the dramatic club.</p>
                     
-                    Therefore, for a more detailed picture, let’s start by exploring which of those 26 genres often go hand in hand. For each genre, the heatmap below showcases the probability of being associated with another genre in the corresponding column. The diagonal indicates the likelihood of being the sole genre present in the movie. Interestingly, most genres are frequently linked to the Drama genre, the undisputed champion in our dataset - around 50% of the movies are in the dramatic club.
+                    <img class="responsive-img" alt="Probability of genres co-occurences" src="/epfl-ada-datastory/images/genres-heatmap-cooccurences.png">
                     
-                    ![Probability of genres co-occurences](/epfl-ada-datastory/images/genres-heatmap-cooccurences.png)
+                    <p>The mysterious white square in the above figure represents the Science Fiction enthusiasts among us. We've made the daring decision to split the genre into Science and Fiction. Unthinkable 😨! As you can see, the Science genre is practically inseparable from Fiction, but the reverse is not true. So, Sci-Fi fans, don't worry; you're fully included in the Science genre.</p>
                     
-                    The mysterious white square in the above figure represents the Science Fiction enthusiasts among us. We've made the daring decision to split the genre into Science and Fiction. Unthinkable 😨! As you can see, the Science genre is practically inseparable from Fiction, but the reverse is not true. So, Sci-Fi fans, don't worry; you're fully included in the Science genre.
-                    
-                    Now that we've covered the intricate blend of movie genres, let's dive into the fascinating journey of how actors gracefully navigate through these cinematic genres. Our strategy? We will calculate the proportion of movies each actor has taken on in our chosen genres. To keep things meaningful, though, we had to wave goodbye to actors with fewer than 20 movies. Apologies folks, but serious results demand a bit of tough love.
+                    <p>Now that we've covered the intricate blend of movie genres, let's dive into the fascinating journey of how actors gracefully navigate through these cinematic genres. Our strategy? We will calculate the proportion of movies each actor has taken on in our chosen genres. To keep things meaningful, though, we had to wave goodbye to actors with fewer than 20 movies. Apologies folks, but serious results demand a bit of tough love.</p>
                     
                     [une liste déroulante ou on peut voir les proportions de genres pour chaque acteurs si possible]
                     
-                    Ever wonder if actors freely hop between movie genres or if there's some pattern to their cinematic choices? To crack this mystery, we're studying the correlation of their genre proportions. This will help us unveil whether playing a role in a certain genre clashes with taking on a role in another. For instance, can you picture your favorite comedian actor in a serious drama film? It's like asking a cat to bark, right? 
+                    <p>Ever wonder if actors freely hop between movie genres or if there's some pattern to their cinematic choices? To crack this mystery, we're studying the correlation of their genre proportions. This will help us unveil whether playing a role in a certain genre clashes with taking on a role in another. For instance, can you picture your favorite comedian actor in a serious drama film? It's like asking a cat to bark, right?</p>
                     
                     [Mettre un bouton pour arranger les genres comme à gauche]
                     
-                    The figure above lays out the genre compatibilities and incompatibilities from an actor's perspective. It suggests that if you're eyeing a role in fiction or thriller movies, you might have to dabble in a bit of crime. Not feeling the criminal vibes? Comedy and romance may be cozier options! 
+                    <p>The figure above lays out the genre compatibilities and incompatibilities from an actor's perspective. It suggests that if you're eyeing a role in fiction or thriller movies, you might have to dabble in a bit of crime. Not feeling the criminal vibes? Comedy and romance may be cozier options!</p>
                     
-                    By clicking on the button above, you can shuffle the rows and columns of the covariance matrix displayed earlier. This will unveil two distinct types of career profiles.
+                    <p>By clicking on the button above, you can shuffle the rows and columns of the covariance matrix displayed earlier. This will unveil two distinct types of career profiles.</p>
                     
-                    In the top-left corner, screen maestros effortlessly navigate black-and-white classics, dance through animated whimsy, and weave heartwarming tales of family and romance. Armed with rose-colored lenses, they paint a cinematic world inviting audiences to embrace the lighter side—with comedy, fantasy, romance, and musicals.
+                    <p>In the top-left corner, screen maestros effortlessly navigate black-and-white classics, dance through animated whimsy, and weave heartwarming tales of family and romance. Armed with rose-colored lenses, they paint a cinematic world inviting audiences to embrace the lighter side—with comedy, fantasy, romance, and musicals.</p>
                     
-                    Venturing yourself to the intense bottom-right corner is quite courageous! Here, actors command the stage with compelling intensity, diving into drama, war, thriller, horror, and crime. Masters of suspense, they captivate with performances evoking fear, anticipation, and raw emotion.
+                    <p>Venturing yourself to the intense bottom-right corner is quite courageous! Here, actors command the stage with compelling intensity, diving into drama, war, thriller, horror, and crime. Masters of suspense, they captivate with performances evoking fear, anticipation, and raw emotion.</p>
                     
-                    And right in the middle, the documentary genre, playing the peacemaker between the chill vibes and the heart-pounding suspense. It's the swiss genre, where actors of all genres can gather, as it remains uncorrelated to most of the other genres.
+                    <p>And right in the middle, the documentary genre, playing the peacemaker between the chill vibes and the heart-pounding suspense. It's the swiss genre, where actors of all genres can gather, as it remains uncorrelated to most of the other genres.</p>
                     
-                    Finally, to squeeze the most juice out of these genre proportions, we tossed our actors into the clustering cocktail of genres. Behold! We shook things up and stumbled upon six different clusters, each with its own unique flair:
+                    <p>Finally, to squeeze the most juice out of these genre proportions, we tossed our actors into the clustering cocktail of genres. Behold! We shook things up and stumbled upon six different clusters, each with its own unique flair:
                     
-                    0. "The Charlie Chaplin Cluster" - Where timeless charm meets classic charisma.
-                    1. "Actors of World Cinema" - Crafting diverse tales beyond Hollywood's borders.
-                    2. "The Dramaturgist Explorer" - Unearthing the depths of dramatic artistry.
-                    3. "The Multigenre Comedian" - Masters of laughter in every cinematic flavor.
-                    4. "The Post-War Western Actors” - Saddle up for a ride through the wild, wild roles.
-                    5. "Family Friendly Actors" - Bringing smiles to audiences of all ages.
+                        <ol start="0">
+                            <li>"The Charlie Chaplin Cluster" - Where timeless charm meets classic charisma.</li>
+                            <li>"Actors of World Cinema" - Crafting diverse tales beyond Hollywood's borders.</li>
+                            <li>"The Dramaturgist Explorer" - Unearthing the depths of dramatic artistry.</li>
+                            <li>"The Multigenre Comedian" - Masters of laughter in every cinematic flavor.</li>
+                            <li>"The Post-War Western Actors” - Saddle up for a ride through the wild, wild roles.</li>
+                            <li>"Family Friendly Actors" - Bringing smiles to audiences of all ages.</li>
+                        </ol>
                     
-                    Check them out below!
+                        Check them out below!
+                    </p>
                     
-                    ![Methoids of the different clusters](/epfl-ada-datastory/images/genres-clusters-methoids.png)
+                    <img class="responsive-img" alt="Methoids of the different clusters" src="/epfl-ada-datastory/images/genres-clusters-methoids.png">
                     
-                    Let's delve into the most distinct traits of each cluster, kicking off with the birth years of our beloved actors. Cluster 0 and 4 are like a time capsule, housing performers from the early 20th century. As for the others, they're still in the running for the "living" category. It's crucial to note that the clustering was based solely on genre proportions. This uncovers the intriguing fact that actors from different eras weren't necessarily stepping into the same movie genres. As the movie industry evolved over time, it forced actors to follow the trend.
+                    <p>Let's delve into the most distinct traits of each cluster, kicking off with the birth years of our beloved actors. Cluster 0 and 4 are like a time capsule, housing performers from the early 20th century. As for the others, they're still in the running for the "living" category. It's crucial to note that the clustering was based solely on genre proportions. This uncovers the intriguing fact that actors from different eras weren't necessarily stepping into the same movie genres. As the movie industry evolved over time, it forced actors to follow the trend.</p>
+
+                    <img class="responsive-img" alt="Birth years across clusters" src="/epfl-ada-datastory/images/genres-birth-years-across-clusters.png">
                     
-                    ![Birth years across clusters](/epfl-ada-datastory/images/genres-birth-years-across-clusters.png)
+                    <p>Now, let's cast our eyes on the most common ethnicities within the various clusters. Cluster 1, representing the actors of world cinema, is throwing a Bollywood fiesta, mainly hosting actors from the Indian regions. Though, a tiny troupe of Germans seems to have taken a detour and joined the party. Meanwhile, in the other clusters, the majority of our actors proudly wear the American badge or belong to the Jewish community.</p>
+
+                    <img class="responsive-img" alt="Ethnicities across clusters" src="/epfl-ada-datastory/images/genres-ethnicities-across-clusters.png">
                     
-                    Now, let's cast our eyes on the most common ethnicities within the various clusters. Cluster 1, representing the actors of world cinema, is throwing a Bollywood fiesta, mainly hosting actors from the Indian regions. Though, a tiny troupe of Germans seems to have taken a detour and joined the party. Meanwhile, in the other clusters, the majority of our actors proudly wear the American badge or belong to the Jewish community.
+                    <p>Alright, actors have their pick of various genres, some of which pair up like a dream, while others might not hit the right note. But here's the burning question: To what extent do our actors delve into the diverse world of genres? </p>
                     
-                    ![Ethnicities across clusters](/epfl-ada-datastory/images/genres-ethnicities-across-clusters.png)
+                    <p>To answer this, we will use the Normalized Hill's Herfindahl Index (NHHI) as suggested into the following article <a href="https://www.mdpi.com/2227-7390/11/5/1252">An Analysis of Actors in Malay Films: Small Worlds, Centralities and Genre Diversity</a>. Typically used in economics the HHI-score measures market concentration - how much a few companies dominate the production of a good or service. In our scenario, we're replacing the different companies producing a good or service with the genres played by an actor. Using the normalized version of this index, we obtain a genre diversity score for each actor, ranging from 0 to 1. The higher the score, the more our actors have explored a myriad of genres.</p>
                     
-                    Alright, actors have their pick of various genres, some of which pair up like a dream, while others might not hit the right note. But here's the burning question: To what extent do our actors delve into the diverse world of genres? 
+                    <p>Let’s first have a look at the genre diversity distribution:</p>
                     
-                    To answer this, we will use the Normalized Hill's Herfindahl Index (NHHI) as suggested into the following article [An Analysis of Actors in Malay Films: Small Worlds, Centralities and Genre Diversity](https://www.mdpi.com/2227-7390/11/5/1252). Typically used in economics the HHI-score measures market concentration - how much a few companies dominate the production of a good or service. In our scenario, we're replacing the different companies producing a good or service with the genres played by an actor. Using the normalized version of this index, we obtain a genre diversity score for each actor, ranging from 0 to 1. The higher the score, the more our actors have explored a myriad of genres.
+                    <img class="responsive-img" alt="NHHI distribution" src="/epfl-ada-datastory/images/genres-nhhi-distribution.png">
                     
-                    Let’s first have a look at the genre diversity distribution:
+                    <p>Our actors seem pretty curious with an average genre diversity score of 89%, which is equivalent to embarking on a journey through 7 distinct genres with equal enthusiasm. However, it appears that some actors are a bit chicken-hearted in this regard. Let's sneak a peek at the actors who have bravely pirouetted into more genres and those who are treading a bit more cautiously.</p>
                     
-                    ![NHHI distribution](/epfl-ada-datastory/images/genres-nhhi-distribution.png)
+                    <img class="responsive-img" alt="Genres of some actors" src="/epfl-ada-datastory/images/genres-nhhi-actors.png">
                     
-                    Our actors seem pretty curious with an average genre diversity score of 89%, which is equivalent to embarking on a journey through 7 distinct genres with equal enthusiasm. However, it appears that some actors are a bit chicken-hearted in this regard. Let's sneak a peek at the actors who have bravely pirouetted into more genres and those who are treading a bit more cautiously.
+                    <p>What you see above is, therefore, the genre distribution for actors with the highest and lowest genre diversity scores. Now, one might argue "Well, isn't this just a sneaky way of counting how many movies an actor plays a role in?" Nope, our analysis revealed no correlations between this score and the number of movies an actor has made. So, playing in more movies doesn't turn an actor into a genre explorer. </p>
                     
-                    ![Genres of some actors](/epfl-ada-datastory/images/genres-nhhi-actors.png)
-                    
-                    What you see above is, therefore, the genre distribution for actors with the highest and lowest genre diversity scores. Now, one might argue "Well, isn't this just a sneaky way of counting how many movies an actor plays a role in?" Nope, our analysis revealed no correlations between this score and the number of movies an actor has made. So, playing in more movies doesn't turn an actor into a genre explorer. 
-                    
-                    To wrap up this genre adventure, let's take on an ambitious challenge and attempt to create the typical genre distribution of an actor in the movie industry across different time periods. To embark on this cinematic journey, we create a Markov chain of genre transitions, mapping out how our actors gracefully leap from one genre to another during their genre-hopping escapade.
+                    <p>To wrap up this genre adventure, let's take on an ambitious challenge and attempt to create the typical genre distribution of an actor in the movie industry across different time periods. To embark on this cinematic journey, we create a Markov chain of genre transitions, mapping out how our actors gracefully leap from one genre to another during their genre-hopping escapade.</p>
                     
                     [image]
                     
-                    And now, for the grand finale, let's release our actors to whimsically wander along the currents of the Markov river, carried away by its cinematic magic. The result? The steady states, showcasing the unique genre distributions at different epochs.
+                    <p>And now, for the grand finale, let's release our actors to whimsically wander along the currents of the Markov river, carried away by its cinematic magic. The result? The steady states, showcasing the unique genre distributions at different epochs.</p>
                     
                     [image]
                     
-                    Post-1930, the era of talking pictures, and actors had to do more than strike a pose – they had to really talk, and not just in whispers. Extended dialogues became the norm. Tough gig! This period also marked the peak of musicals. Actors weren't just speaking; they had to bring the melody. Acting became a full-body job.
+                    <p>Post-1930, the era of talking pictures, and actors had to do more than strike a pose – they had to really talk, and not just in whispers. Extended dialogues became the norm. Tough gig! This period also marked the peak of musicals. Actors weren't just speaking; they had to bring the melody. Acting became a full-body job.</p>
                     
-                    Fast forward to the groovy '70s, the age of color TV. Actors ditched the black-and-white film scene entirely. No more monochrome gigs for these trendsetters!
+                    <p>Fast forward to the groovy '70s, the age of color TV. Actors ditched the black-and-white film scene entirely. No more monochrome gigs for these trendsetters!</p>
                     
-                    Last but not least, let's dive into the general trend. It appears our thespians are swapping out their cowboy hats and military gear for action sequences, suspenseful thrillers, and horror escapades. Are they riding the wave of the latest trend, or are our actors just craving a bit more adrenaline on set?
+                    <p>Last but not least, let's dive into the general trend. It appears our thespians are swapping out their cowboy hats and military gear for action sequences, suspenseful thrillers, and horror escapades. Are they riding the wave of the latest trend, or are our actors just craving a bit more adrenaline on set?</p>
                 </div>
                 
                 
