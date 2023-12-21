@@ -76,17 +76,9 @@ So, the unsuccessful career-builders are the last to start, while the Prolific L
 
 Now, onto the second factor to be studied: career length.
 
-[insert distribution of career lengths by gender]
+{% include career-distribution-career-length.html %}
 
-Once again, let’s check if there are some differences by gender with our trusty friend, the t-test. Computing the p-value, there is indeed a difference. It appears that women also have shorter careers. 
-
-Now, let's dive into the number of active years for actors. We're defining an active year as one where our stars graced the silver screen with their presence.
-
-[insert active years and number of movies plot]
-
-Examining the graph, it's clear that many actors have significantly smaller active years compared to their overall career lengths. Not surprising at all, considering the constant struggle to secure consistent job opportunities in the challenging world of acting. Only a handful have truly hit the jackpot, with active years that closely match their entire career lengths. 
-
-Moreover, there seems to be no apparent correlation between active years and career lengths. Let's solidify this by calculating the Pearson correlation coefficient. The observed correlation coefficient for actors stands at approximately r ≈ 0.59. To put it to the test, we created a null model, randomly sampling values of L and s from the pool of career profiles. Interestingly, the observed correlation is not significantly different from what we could expect by random chance alone. The cinematic journey remains a mysterious and unpredictable ride!
+Once again, let’s check if there are some differences by gender with our trusty friend, the t-test. Computing the p-value, there is indeed a difference. It appears that women also have shorter careers.
 
 # Oscars
 
