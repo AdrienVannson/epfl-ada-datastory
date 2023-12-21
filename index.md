@@ -88,7 +88,7 @@ Speaking of gender differences, can it also be that women are more stereotypical
 
 This was a small teaser for the continuation of our analysis. In this section, we will delve into how our beloved actors are scattered across the vast landscape of genres. Our preprocessing allowed us to unveil 26 main different genres in our dataset. Now, here's the twist—most movies find themselves embracing more than one genre, as you can see below.
 
-[insert plot du nombre de genre par film]
+![Distribution of the number of genres per film](/epfl-ada-datastory/images/genres-number-of-genres-distribution.png)
 
 Therefore, for a more detailed picture, let’s start by exploring which of those 26 genres often go hand in hand. For each genre, the heatmap below showcases the probability of being associated with another genre in the corresponding column. The diagonal indicates the likelihood of being the sole genre present in the movie. Interestingly, most genres are frequently linked to the Drama genre, the undisputed champion in our dataset - around 50% of the movies are in the dramatic club.
 
