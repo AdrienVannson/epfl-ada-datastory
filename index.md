@@ -141,11 +141,11 @@ To answer this, we will use the Normalized Hill's Herfindahl Index (NHHI) as sug
 
 Let’s first have a look at the genre diversity distribution:
 
-[image]
+![NHHI distribution](/epfl-ada-datastory/images/genres-nhhi-distribution.png)
 
 Our actors seem pretty curious with an average genre diversity score of 89%, which is equivalent to embarking on a journey through 7 distinct genres with equal enthusiasm. However, it appears that some actors are a bit chicken-hearted in this regard. Let's sneak a peek at the actors who have bravely pirouetted into more genres and those who are treading a bit more cautiously.
 
-[image]
+![Genres of some actors](/epfl-ada-datastory/images/genres-nhhi-actors.png)
 
 What you see above is, therefore, the genre distribution for actors with the highest and lowest genre diversity scores. Now, one might argue "Well, isn't this just a sneaky way of counting how many movies an actor plays a role in?" Nope, our analysis revealed no correlations between this score and the number of movies an actor has made. So, playing in more movies doesn't turn an actor into a genre explorer. 
 
