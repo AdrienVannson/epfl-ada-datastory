@@ -92,7 +92,7 @@ This was a small teaser for the continuation of our analysis. In this section, w
 
 Therefore, for a more detailed picture, let’s start by exploring which of those 26 genres often go hand in hand. For each genre, the heatmap below showcases the probability of being associated with another genre in the corresponding column. The diagonal indicates the likelihood of being the sole genre present in the movie. Interestingly, most genres are frequently linked to the Drama genre, the undisputed champion in our dataset - around 50% of the movies are in the dramatic club.
 
-[insert heatmap co-occurrences]
+![Probability of genres co-occurences](/epfl-ada-datastory/images/genres-heatmap-cooccurences.png)
 
 The mysterious white square in the above figure represents the Science Fiction enthusiasts among us. We've made the daring decision to split the genre into Science and Fiction. Unthinkable 😨! As you can see, the Science genre is practically inseparable from Fiction, but the reverse is not true. So, Sci-Fi fans, don't worry; you're fully included in the Science genre.
 
@@ -116,24 +116,24 @@ And right in the middle, the documentary genre, playing the peacemaker between t
 
 Finally, to squeeze the most juice out of these genre proportions, we tossed our actors into the clustering cocktail of genres. Behold! We shook things up and stumbled upon six different clusters, each with its own unique flair:
 
-0."The Charlie Chaplin Cluster" - Where timeless charm meets classic charisma.
-1."Actors of World Cinema" - Crafting diverse tales beyond Hollywood's borders.
-2."The Dramaturgist Explorer" - Unearthing the depths of dramatic artistry.
-3."The Multigenre Comedian" - Masters of laughter in every cinematic flavor.
-4."The Post-War Western Actors” - Saddle up for a ride through the wild, wild roles.
-5."Family Friendly Actors" - Bringing smiles to audiences of all ages.
+  0. "The Charlie Chaplin Cluster" - Where timeless charm meets classic charisma.
+  1. "Actors of World Cinema" - Crafting diverse tales beyond Hollywood's borders.
+  2. "The Dramaturgist Explorer" - Unearthing the depths of dramatic artistry.
+  3. "The Multigenre Comedian" - Masters of laughter in every cinematic flavor.
+  4. "The Post-War Western Actors” - Saddle up for a ride through the wild, wild roles.
+  5. "Family Friendly Actors" - Bringing smiles to audiences of all ages.
 
 Check them out below!
 
-[image]
+![Methoids of the different clusters](/epfl-ada-datastory/images/genres-clusters-methoids.png)
 
 Let's delve into the most distinct traits of each cluster, kicking off with the birth years of our beloved actors. Cluster 0 and 4 are like a time capsule, housing performers from the early 20th century. As for the others, they're still in the running for the "living" category. It's crucial to note that the clustering was based solely on genre proportions. This uncovers the intriguing fact that actors from different eras weren't necessarily stepping into the same movie genres. As the movie industry evolved over time, it forced actors to follow the trend.
 
-[image]
+![Birth years across clusters](/epfl-ada-datastory/images/genres-birth-years-across-clusters.png)
 
 Now, let's cast our eyes on the most common ethnicities within the various clusters. Cluster 1, representing the actors of world cinema, is throwing a Bollywood fiesta, mainly hosting actors from the Indian regions. Though, a tiny troupe of Germans seems to have taken a detour and joined the party. Meanwhile, in the other clusters, the majority of our actors proudly wear the American badge or belong to the Jewish community.
 
-[image]
+![Ethnicities across clusters](/epfl-ada-datastory/images/genres-ethnicities-across-clusters.png)
 
 Alright, actors have their pick of various genres, some of which pair up like a dream, while others might not hit the right note. But here's the burning question: To what extent do our actors delve into the diverse world of genres? 
 
