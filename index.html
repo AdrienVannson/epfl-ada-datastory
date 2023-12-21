@@ -345,7 +345,7 @@
             M.ScrollSpy.init(document.querySelectorAll('.scrollspy'), {});
             M.Tabs.init(document.querySelectorAll('.tabs'), {});
             
-            fetch("data.json")
+            fetch("https://www.adrienvannson.fr/epfl-ada-datastory/data.json")
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`Network response was not ok: ${response.statusText}`);
