@@ -13,6 +13,32 @@
         }
         * {box-sizing: border-box;}
 
+        .img-comp-container {
+        position: relative;
+        height: 700px; /*should be the same height as the images*/
+        }
+
+        .img-comp-img {
+        position: absolute;
+        width: auto;
+        height: auto;
+        overflow:hidden;
+        }
+
+        .img-comp-img img {
+        display:block;
+        }
+
+        .img-comp-slider {
+        position: absolute;
+        z-index: 9;
+        cursor: ew-resize;
+        /* set the appearance of the slider: */
+        width: 5%; /* Set the width of the slider to 100% to cover the entire container */
+        height: 5%; /* Set the height of the slider to 100% to cover the entire container */
+        background: url('images/5678889.png') center center/cover; /* Use your image as the background */
+        border-radius: 50%;
+    }
         @font-face {
             font-family: 'fonttext'; /* Specify the desired font-family name */
             src: url('font/ATCArquette-Regular.ttf') format('truetype');
@@ -75,32 +101,6 @@
             font-family: 'fonttitle', sans-serif; /* Replace 'Arial' with your preferred font */
             margin-left: 2rem !important; /* Adjust the left margin */
         }
-        .img-comp-container {
-         position: relative;
-         height: 700px; /*should be the same height as the images*/
-         }
-
-         .img-comp-img {
-         position: absolute;
-         width: auto;
-         height: auto;
-         overflow:hidden;
-         }
-
-         .img-comp-img img {
-         display:block;
-         }
-
-         .img-comp-slider {
-         position: absolute;
-         z-index: 9;
-         cursor: ew-resize;
-         /* set the appearance of the slider: */
-         width: 5%; /* Set the width of the slider to 100% to cover the entire container */
-         height: 5%; /* Set the height of the slider to 100% to cover the entire container */
-         background: url('images/5678889.png') center center/cover; /* Use your image as the background */
-         border-radius: 50%;
-     }
     </style>
     <script>
         function initComparisons() {
@@ -270,14 +270,13 @@
                     
                     <ol start="0">
                         <li><strong>Steady Builders</strong>. Here, we have our steady career builders. These individuals take their sweet time, adopting a patient and persistent approach to construct their acting legacy. Their journey showcases a gradual but steady increase in movie engagements over an extended period, before gradually dissolving.</li>
-                        
+
                         <li><strong>Unsuccessful career-builders</strong>. Once again, this is home to the non-successful folks who just couldn't take off. We get it; building a career is no easy feat. A few movies in, and it's a reluctant farewell.</li>
-                        
+
                         <li><strong>Prolific Long-Term Performers</strong>. Now, brace yourselves for the prolific long-term performers. This elite group features heavyweights, a small number of actors boasting a significant number of movies over almost 50 years. These individuals have held their ground in the movie industry across a considerable period.</li>
-                        
+
                         <li><strong>Swift Rise & Fall</strong>. Last but not least, we have the actors that burst onto the scene with a strong start, only to experience a progressive decline over approximately 20 years. It's a tale of ephemeral success followed by a gradual decrease in movie engagements.</li>
-                    
-                    </0l>
+                    </ol>
                     
                     <!-- <p>Hold on, the plot thickens. Brace yourselves for a stark reality check – gender inequality is alive and kicking. A mere 9% of women in the Prolific Long-Term Performers, 17% in the Steady Builders, 32% for the Unsuccessful Career Builders and 34% for the Ephemeral Success with Progressive Fade. It's indeed a sobering moment for women in the industry. The battle for equal representation rages on.</p> -->
                     
@@ -492,7 +491,7 @@
                     <p>Hopefully, you’ve made it through the avalanche of information. Now, let’s detect some communities!</p>
                     
                     <p>We can see that the network forms distinct communities with strong internal connections and weaker connections between them, implying limited collaboration among actors from different communities. These communities represent film industries and various genres present in our different countries.</p>
-
+                    
                     <div class="img-comp-container" width=700px height=700px>
                         <div class="img-comp-img">
                           <img src="images/NetworkSmaller_communities.png" width=700px height=700px>
@@ -505,6 +504,7 @@
                      /*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
                      initComparisons();
                     </script>
+                    
                     <p>And remember our friends from Japan? Slide the cursor <img src="images/5678889.png" width=15px, height=15px> to revisit the country communities. Turns out, the Japanese aren't just one group; they're split into the Anime and East Asian Cinema genres.</p>
 
                     <p>Grab your director's chair; we're about to embark on the final act of our network analysis blockbuster! We're now diving into the global film scene, exploring the thrilling world of movie co-productions across different countries. </p>
@@ -618,10 +618,9 @@
                 <div id="conclusion" class="section scrollspy">
                     <h2>Conclusion</h2>
                     <p>Well, my cinematic companion, congratulations on completing this epic odyssey through the world of actors! You've now earned the prestigious title of an expert in all things actor. Should your hunger for knowledge persist, sail over to our GitHub, crafted with love (and maybe a tear or two). As the curtains close on this adventure, we bid you a fond farewell. Until our virtual paths cross again, happy coding and Merry Christmas!</p>
-            
-                    <div style="text-align: center;">
-                        <p>Valérie, Michael, Mariem, Jennifer and Adrien</p>
-                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <p>Valérie, Michael, Mariem, Jennifer and Adrien</p>
                 </div>
 
             </div>
@@ -647,13 +646,9 @@
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.3/dist/js/materialize.min.js"></script>
-    <script src="https://unpkg.com/image-compare-viewer/dist/image-compare-viewer.min.js"></script>
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const element = document.getElementById("image-compare");
-            const viewer = new ImageCompare(element).mount();
-
             M.ScrollSpy.init(document.querySelectorAll('.scrollspy'), {});
             M.Tabs.init(document.querySelectorAll('.tabs'), {});
             
