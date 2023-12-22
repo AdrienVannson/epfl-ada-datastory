@@ -107,7 +107,7 @@
                 <div id="career-catacterization" class="section scrollspy">
                     <h2>Career Characterization</h2>
                     
-                    <p>Let's kick off our journey into the fascinating world behind the scenes of stardom with an assessment of our beloved actors' career trajectories. To navigate this cinematic maze, we will need a clever approach to construct and compare their careers. Here's the plan: For each actor, we'll craft their profile sequence, showing the number of movies they've graced each year throughout their career.</p>
+                    <p>Let's kick off our journey into the fascinating world behind the scenes of stardom with a general assessment of our beloved actors' career trajectories. To navigate this cinematic maze, we will need a clever approach to construct and compare their careers. Here's the plan: For each actor, we'll craft their profile sequence, showing the number of movies they've graced each year throughout their career.</p>
                     
                     <p>If you're eager to peek at the profile sequences of your cherished actor,  you can search for them here. But, brace yourself, you’ve got to be a fan of old-fashioned movies because, at this stage of our analysis, we're only considering actors for whom we have data spanning their entire career. So, our modern-day heartthrobs still in the thick of their cinematic adventures won't make the cut.</p>
                     
@@ -145,20 +145,22 @@
                     
                     <p>My heart goes out to these individuals, but tough decisions must be made. We have to trim the cast, shifting our focus to actors with a more extensive career, and uncover underlying trends in those with at least 5 movies (come on, folks, it's not that much).</p>
                     
-                    <p>But, wait a minute. Before doing that, do you also smell something fishy in the air? Ah, yes, it smells like... gender inequality! Overall, 33.27% of our actors are female. Now, let's dim the lights and break it down by clusters, shall we?</p>
+                    <p>But, wait a minute. Before doing that, do you also smell something fishy in the air? Ah, yes, it smells like... gender inequality!</p>
+
+                    </p> Overall, 33.27% of our actors are female. Now, let's dim the lights and break it down by clusters, shall we?</p>
                     <ul>
                         <li>Cluster 0: 33.15% of females</li>
                         <li>Cluster 1: 25.20% of females</li>
                     </ul>
                     <p>So, not only is the overall percentage of female actors lower than their male counterparts, but this gender gap widens in the successful career-building group. To investigate if this difference is statistically significant, we're bringing in our old friend, the t-test. And yep, treating the fraction of females like the mean of a variable indicating female gender, the p-value confirms the sad truth – it's below the significance threshold: Women have it harder.</p>
                     
-                    <p>After a moment of silence, let’s swing back into clustering. Same method, Silhouette score, 4 clusters. Now, let’s analyze the graph.</p>
+                    <p>After a small moment of silence, let’s swing back into clustering. Same method, Silhouette score, 4 clusters. Now, let’s analyze the graph.</p>
                     
                     <object type="text/html" data="/epfl-ada-datastory/graphs/career-best-actors-clusters.html" width="100%" height="400px">
                         <p>Unable to load the included file.</p>
                     </object>
                     
-                    <p>Hold onto your seats! There are some intriguing differences, my friends.</p>
+                    <p>Hold onto your seats! There are some intriguing differences, my friend.</p>
                     
                     <ul>
                         <li>Cluster 0: <strong>Steady Builders</strong>. Here, we have our steady career builders. These individuals take their sweet time, adopting a patient and persistent approach to construct their acting legacy. Their journey showcases a gradual but steady increase in movie engagements over an extended period, before gradually dissolving.</li>
@@ -167,54 +169,55 @@
                         
                         <li>Cluster 2: <strong>Prolific Long-Term Performers</strong>. Now, brace yourselves for the prolific long-term performers. This elite group features heavyweights, a small number of actors boasting a significant number of movies over almost 50 years. These individuals have held their ground in the movie industry across a considerable period.</li>
                         
-                        <li>Cluster 3: <strong>Ephemeral Success with Progressive Fade</strong>. Last but not least, we have the actors that burst onto the scene with a strong start, only to experience a progressive decline over approximately 20 years. It's a tale of ephemeral success followed by a gradual decrease in movie engagements.</li>
+                        <li>Cluster 3: <strong>Swift Rise & Fall</strong>. Last but not least, we have the actors that burst onto the scene with a strong start, only to experience a progressive decline over approximately 20 years. It's a tale of ephemeral success followed by a gradual decrease in movie engagements.</li>
                     </ul>
                     
-                    <p>Hold on, the plot thickens. Brace yourselves for a stark reality check – gender inequality is alive and kicking. A mere 9% of women in the Prolific Long-Term Performers, 17% in the Steady Builders, 32% for the Unsuccessful Career Builders and 34% for the Ephemeral Success with Progressive Fade. It's indeed a sobering moment for women in the industry. The battle for equal representation rages on.</p>
+                    <!-- <p>Hold on, the plot thickens. Brace yourselves for a stark reality check – gender inequality is alive and kicking. A mere 9% of women in the Prolific Long-Term Performers, 17% in the Steady Builders, 32% for the Unsuccessful Career Builders and 34% for the Ephemeral Success with Progressive Fade. It's indeed a sobering moment for women in the industry. The battle for equal representation rages on.</p> -->
                     
-                    [Insert fraction of women per cluster in a nice way]
+                    <!-- [Insert fraction of women per cluster in a nice way] -->
                     
                     <p>Now that we've got a handle on the typical career trajectories, let's zoom in on the specifics.</p>
                     
-                    <p>First up, we're curious about the age when actors kick off their cinematic journeys. It appears to hover around 30 years old. Now, two burning questions emerge: Is this initiation age different by gender? And does it vary across different clusters?</p>
-                    
-                    <p>Breaking it down by gender, we spot some disparities: around 32 for men and 26 for women. Intriguing, right? Let's bring back our trusty tool, the t-test, to confirm the statistical significance. And voila, the p-value makes it official – this difference is indeed statistically significant. But why? Is it because the industry tends to favor younger women?</p>
+                    <p>First up, we're curious about the age when actors kick off their cinematic journeys. It appears to hover around 30 years old. Now, one burning question emerges: Is this initiation age different by gender?</p>
                     
                     <object type="text/html" data="/epfl-ada-datastory/graphs/career-age-first-appearance.html" width="100%" height="400px">
                         <p>Unable to load the included file.</p>
                     </object>
+
+                    <p>Indeed, breaking it down by gender, we spot some disparities: around 32 for men and 26 for women. Intriguing, right? Let's bring back our trusty tool, the t-test, to confirm the statistical significance. And voila, the p-value makes it official – this difference is indeed statistically significant. But why? Is it because the industry tends to favor younger women?</p>
                     
-                    <p>Next, let’s break it down by cluster:</p>
                     
-                    [insert plot boxplot distribution per cluster]
+                    <!-- <p>Next, let’s break it down by cluster:</p> -->
                     
-                    <p>So, the unsuccessful career-builders are the last to start, while the Prolific Long-Term Performers are the first to kick off their careers. Is this hinting that starting acting careers early might indeed be a key factor in achieving success?</p>
+                    <!-- [insert plot boxplot distribution per cluster] -->
                     
-                    <p>Now, onto the second factor to be studied: career length.</p>
+                    <!-- <p>So, the unsuccessful career-builders are the last to start, while the Prolific Long-Term Performers are the first to kick off their careers. Is this hinting that starting acting careers early might indeed be a key factor in achieving success?</p> -->
+                    
+                    <p>Now, onto the second factor to be studied: Career length.</p>
                     
                     <object type="text/html" data="/epfl-ada-datastory/graphs/career-distribution-career-length.html" width="100%" height="400px">
                         <p>Unable to load the included file.</p>
                     </object>
                     
-                    <p>Once again, let’s check if there are some differences by gender with our trusty friend, the t-test. Computing the p-value, there is indeed a difference. It appears that women also have shorter careers.</p>
+                    <p>Once again, let’s check if there are some differences by gender with our trusty friend, the t-test. Computing the p-value, there is indeed a difference. It appears that women also have shorter careers. It's a sobering moment for women in the industry.</p>
                 </div>
                 
                 <div id="genre-exploration" class="section scrollspy">
                     <h2>Genres Exploration</h2>
                     
-                    <p>Speaking of gender differences, can it also be that women are more stereotypically cast in certain movie genres? Let's embrace the cliché: women star in romance movies, while Westerns are supposedly for the rugged men. Well, prepare for a plot twist because, unfortunately, this is not just a cliché; it's the harsh reality. Below, you'll discover the gender breakdown for each genre that we've meticulously analyzed. And here's a fun fact for you: surprisingly, women are quite terrifyingly well-represented in horror films as well.</p>
+                    <p>Speaking of gender differences, can it also be that women are more stereotypically cast in certain movie genres? Let's embrace the cliché: women star in romance movies, while Westerns are supposedly for the rugged men. Well, prepare for a plot twist because, unfortunately, this is not just a cliché; it's the harsh reality. Below, you'll discover the gender breakdown for each genre that we've meticulously analyzed. </p>
                     
                     [insert pie chart of genres by gender] 
                     
-                    <p>This was a small teaser for the continuation of our analysis. In this section, we will delve into how our beloved actors are scattered across the vast landscape of genres. Our preprocessing allowed us to unveil 26 main different genres in our dataset. Now, here's the twist—most movies find themselves embracing more than one genre, as you can see below.</p>
+                    <p>This was a small teaser for the continuation of our analysis. In this section, we will delve into how our beloved actors are scattered across the vast landscape of genres. Our preprocessing allowed us to unveil 26 main different genres in our dataset. Now, here's the twist—most movies find themselves embracing more than one genre.</p>
                     
-                    <img class="responsive-img" alt="Distribution of the number of genres per film" src="/epfl-ada-datastory/images/genres-number-of-genres-distribution.png">
+                    <!-- <img class="responsive-img" alt="Distribution of the number of genres per film" src="/epfl-ada-datastory/images/genres-number-of-genres-distribution.png"> -->
                     
                     <p>Therefore, for a more detailed picture, let’s start by exploring which of those 26 genres often go hand in hand. For each genre, the heatmap below showcases the probability of being associated with another genre in the corresponding column. The diagonal indicates the likelihood of being the sole genre present in the movie. Interestingly, most genres are frequently linked to the Drama genre, the undisputed champion in our dataset - around 50% of the movies are in the dramatic club.</p>
                     
                     <img class="responsive-img" alt="Probability of genres co-occurences" src="/epfl-ada-datastory/images/genres-heatmap-cooccurences.png">
                     
-                    <p>The mysterious white square in the above figure represents the Science Fiction enthusiasts among us. We've made the daring decision to split the genre into Science and Fiction. Unthinkable 😨! As you can see, the Science genre is practically inseparable from Fiction, but the reverse is not true. So, Sci-Fi fans, don't worry; you're fully included in the Science genre.</p>
+                    <!-- <p>The mysterious white square in the above figure represents the Science Fiction enthusiasts among us. We've made the daring decision to split the genre into Science and Fiction. Unthinkable 😨! As you can see, the Science genre is practically inseparable from Fiction, but the reverse is not true. So, Sci-Fi fans, don't worry; you're fully included in the Science genre.</p> -->
                     
                     <p>Now that we've covered the intricate blend of movie genres, let's dive into the fascinating journey of how actors gracefully navigate through these cinematic genres. Our strategy? We will calculate the proportion of movies each actor has taken on in our chosen genres. To keep things meaningful, though, we had to wave goodbye to actors with fewer than 20 movies. Apologies folks, but serious results demand a bit of tough love.</p>
                     
@@ -241,12 +244,20 @@
                     
                     <p>By clicking on the button above, you can shuffle the rows and columns of the covariance matrix displayed earlier. This will unveil two distinct types of career profiles.</p>
                     
-                    <p>In the top-left corner, screen maestros effortlessly navigate black-and-white classics, dance through animated whimsy, and weave heartwarming tales of family and romance. Armed with rose-colored lenses, they paint a cinematic world inviting audiences to embrace the lighter side—with comedy, fantasy, romance, and musicals.</p>
+                    <ul>
+                        <li>In the top-left corner, we have the screen maestros, who effortlessly navigate black-and-white classics, dance through animated whimsy, and weave heartwarming tales of family, comedy and romance.</li>
+                        
+                        <li>Venturing yourself to the intense bottom-right corner is quite courageous! Here, actors command the stage with compelling intensity, diving into drama, war, thriller, horror, and crime.</li>
+                        
+                        <li>And right in the middle, the documentary genre, playing the peacemaker between the chill vibes and the heart-pounding suspense. It's the swiss genre, where actors of all genres can gather, as it remains uncorrelated to most of the other genres.</li>   
+                    </ul>
+
+                    <!-- <p>In the top-left corner, we have the screen maestros, who effortlessly navigate black-and-white classics, dance through animated whimsy, and weave heartwarming tales of family, comedy and romance.</p>
                     
-                    <p>Venturing yourself to the intense bottom-right corner is quite courageous! Here, actors command the stage with compelling intensity, diving into drama, war, thriller, horror, and crime. Masters of suspense, they captivate with performances evoking fear, anticipation, and raw emotion.</p>
+                    <p>Venturing yourself to the intense bottom-right corner is quite courageous! Here, actors command the stage with compelling intensity, diving into drama, war, thriller, horror, and crime.</p>
                     
                     <p>And right in the middle, the documentary genre, playing the peacemaker between the chill vibes and the heart-pounding suspense. It's the swiss genre, where actors of all genres can gather, as it remains uncorrelated to most of the other genres.</p>
-                    
+                     -->
                     <p>Finally, to squeeze the most juice out of these genre proportions, we tossed our actors into the clustering cocktail of genres. Behold! We shook things up and stumbled upon six different clusters, each with its own unique flair:</p>
                     
                     <ol start="0">
@@ -270,55 +281,124 @@
                     
                     <img class="responsive-img" alt="Ethnicities across clusters" src="/epfl-ada-datastory/images/genres-ethnicities-across-clusters.png">
                     
-                    <p>Alright, actors have their pick of various genres, some of which pair up like a dream, while others might not hit the right note. But here's the burning question: To what extent do our actors delve into the diverse world of genres? </p>
+                    <!-- <p>Alright, actors have their pick of various genres, some of which pair up like a dream, while others might not hit the right note. But here's the burning question: To what extent do our actors delve into the diverse world of genres? </p> -->
                     
-                    <p>To answer this, we will use the Normalized Hill's Herfindahl Index (NHHI) as suggested into the following article <a href="https://www.mdpi.com/2227-7390/11/5/1252">An Analysis of Actors in Malay Films: Small Worlds, Centralities and Genre Diversity</a>. Typically used in economics the HHI-score measures market concentration - how much a few companies dominate the production of a good or service. In our scenario, we're replacing the different companies producing a good or service with the genres played by an actor. Using the normalized version of this index, we obtain a genre diversity score for each actor, ranging from 0 to 1. The higher the score, the more our actors have explored a myriad of genres.</p>
+                    <!-- <p>To answer this, we will use the Normalized Hill's Herfindahl Index (NHHI) as suggested into the following article <a href="https://www.mdpi.com/2227-7390/11/5/1252">An Analysis of Actors in Malay Films: Small Worlds, Centralities and Genre Diversity</a>. Typically used in economics the HHI-score measures market concentration - how much a few companies dominate the production of a good or service. In our scenario, we're replacing the different companies producing a good or service with the genres played by an actor. Using the normalized version of this index, we obtain a genre diversity score for each actor, ranging from 0 to 1. The higher the score, the more our actors have explored a myriad of genres.</p> -->
                     
-                    <p>Let’s first have a look at the genre diversity distribution:</p>
+                    <!-- <p>Let’s first have a look at the genre diversity distribution:</p> -->
                     
-                    <img class="responsive-img" alt="NHHI distribution" src="/epfl-ada-datastory/images/genres-nhhi-distribution.png">
+                    <!-- <img class="responsive-img" alt="NHHI distribution" src="/epfl-ada-datastory/images/genres-nhhi-distribution.png"> -->
                     
-                    <p>Our actors seem pretty curious with an average genre diversity score of 89%, which is equivalent to embarking on a journey through 7 distinct genres with equal enthusiasm. However, it appears that some actors are a bit chicken-hearted in this regard. Let's sneak a peek at the actors who have bravely pirouetted into more genres and those who are treading a bit more cautiously.</p>
+                    <!-- <p>Our actors seem pretty curious with an average genre diversity score of 89%, which is equivalent to embarking on a journey through 7 distinct genres with equal enthusiasm. However, it appears that some actors are a bit chicken-hearted in this regard. Let's sneak a peek at the actors who have bravely pirouetted into more genres and those who are treading a bit more cautiously.</p> -->
                     
-                    <img class="responsive-img" alt="Genres of some actors" src="/epfl-ada-datastory/images/genres-nhhi-actors.png">
+                    <!-- <img class="responsive-img" alt="Genres of some actors" src="/epfl-ada-datastory/images/genres-nhhi-actors.png"> -->
                     
-                    <p>What you see above is, therefore, the genre distribution for actors with the highest and lowest genre diversity scores. Now, one might argue "Well, isn't this just a sneaky way of counting how many movies an actor plays a role in?" Nope, our analysis revealed no correlations between this score and the number of movies an actor has made. So, playing in more movies doesn't turn an actor into a genre explorer. </p>
+                    <!-- <p>What you see above is, therefore, the genre distribution for actors with the highest and lowest genre diversity scores. Now, one might argue "Well, isn't this just a sneaky way of counting how many movies an actor plays a role in?" Nope, our analysis revealed no correlations between this score and the number of movies an actor has made. So, playing in more movies doesn't turn an actor into a genre explorer. </p> -->
                     
-                    <p>To wrap up this genre adventure, let's take on an ambitious challenge and attempt to create the typical genre distribution of an actor in the movie industry across different time periods. To embark on this cinematic journey, we create a Markov chain of genre transitions, mapping out how our actors gracefully leap from one genre to another during their genre-hopping escapade.</p>
-                    
-                    [image]
-                    
-                    <p>And now, for the grand finale, let's release our actors to whimsically wander along the currents of the Markov river, carried away by its cinematic magic. The result? The steady states, showcasing the unique genre distributions at different epochs.</p>
+                    <p>To wrap up this genre adventure, let's take on an ambitious challenge and attempt to create the typical genre distribution of an actor in the movie industry across different time periods. To do so, we create a Markov chain of genre transitions, mapping out how our actors gracefully leap from one genre to another during their genre-hopping escapade.</p>
                     
                     [image]
                     
-                    <p>Post-1930, the era of talking pictures, and actors had to do more than strike a pose – they had to really talk, and not just in whispers. Extended dialogues became the norm. Tough gig! This period also marked the peak of musicals. Actors weren't just speaking; they had to bring the melody. Acting became a full-body job.</p>
+                    <p>And now, for the grand finale, let's release our actors to whimsically wander along the currents of the Markov river, carried away by its cinematic magic. The result? The steady states, revealing distinctive genre distributions. In other words, it illustrates how actors allocate their time across various genres during different periods.</p>
                     
-                    <p>Fast forward to the groovy '70s, the age of color TV. Actors ditched the black-and-white film scene entirely. No more monochrome gigs for these trendsetters!</p>
+                    [image]
                     
-                    <p>Last but not least, let's dive into the general trend. It appears our thespians are swapping out their cowboy hats and military gear for action sequences, suspenseful thrillers, and horror escapades. Are they riding the wave of the latest trend, or are our actors just craving a bit more adrenaline on set?</p>
+                    <!-- <p>Post-1930, the era of talking pictures, and actors had to do more than strike a pose – they had to really talk, and not just in whispers. Extended dialogues became the norm. Tough gig! This period also marked the peak of musicals. Actors weren't just speaking; they had to bring the melody. Acting became a full-body job.</p> -->
+                    
+                    <!-- <p>Fast forward to the groovy '70s, the age of color TV. Actors ditched the black-and-white film scene entirely. No more monochrome gigs for these trendsetters!</p> -->
+                    
+                    <!-- <p>Last but not least, let's dive into the general trend. It appears our thespians are swapping out their cowboy hats and military gear for action sequences, suspenseful thrillers, and horror escapades. Are they riding the wave of the latest trend, or are our actors just craving a bit more adrenaline on set?</p> -->
+                    <p>Let's have a look at that evolution. Post-1930, the talking picture era introduced the challenge of extensive dialogues, coupled with the peak of musicals where actors not only spoke but also carried the melody, transforming acting into a full-body endeavor. Fast forward to the '70s, the era of color TV, actors fearlessly embraced the departure from black-and-white films, bidding adieu to monochrome gigs.</p>
+                
                 </div>
                 
+                <div id="network-analysis" class="section scrollspy">
+                    <h2>Network Analysis </h2>
+
+                    <p> But hey, we’ve asked ourselves a lot of questions, now here is one for you: Can you guess what this is ? </p>
+                    
+                    [insert pic of mariem's network]
+
+                    <p>That beautiful piece of art represents our network of actors where we have an edge between two actors if they starred in the same movie. Now, as you can see, it is indeed a masterpiece, but it’s not really exploitable as it is. Let’s try to untangle this ball of wool, by keeping only actors who have appeared in more than 10 movies and have starred in films from the '90s onward. </p>
+
+                    <p>In the below baby network, the size of the nodes corresponds to the degree, indicating the number of connections an actor has, and the colors denote different countries. To help you with visualizing, we ran a force-directed algorithm. Have a look! </p>
+
+                    [insert pic of mariem's network with countries]
+
+                    <p>Crazy, isn’t it? We can observe big clusters forming for each country, with the most notable, the United States and India, waving the flags for Hollywood and Bollywood! </p>
+                
+                    <p>One could ask “Where is China?” Well, here, it is all about Hong Kong. As a former British colony, Hong Kong had more political and economic freedom compared to mainland China and Taiwan. This led to Hong Kong becoming a filmmaking hub for the Chinese-speaking world.</p>
+                
+                    <p>One important point to observe is that Japanese actors are divided into two groups. We'll figure out the reason behind this split later in the analysis. Stay tuned!</p>
+                    
+                    <p>Bonus: if you wonder who is the Australian quadruple in the bottom of the graph: Click here!</p>
+                    
+                    [add button for the Aussies]
+
+                    <p>Next, let me teach you how to analyze a network, but be prepared to be bombarded with information!</p>
+
+                    <ol>
+                        <li>
+                            <p><b>Sparsity</b><br>The sparsity of the network is 0.0131, which is quite low. This means that the number of actual connections between the actors is much smaller compared to the total number of possible connections in the network. However, despite this low density of connections, 99.88% of our actors can reach each other through their existing connections.</p>
+                        </li>
+                
+                        <li>
+                            <p><b>Shortest Path</b><br>Let's search now for the shortest path between two iconic actors in this complex network, say Meryl Streep and Shahrukh Khan. The challenge is on! And the result is….</p>
+                        </li>
+                
+                        <li>
+                            <p><b>Triadic Closure</b><br>Let's take a more social perspective on the network!</p>
+                            <p>Triadic Closure, in simple terms, is like saying, "A friend of my friend is my friend." It's about actor connections: if Michael knows Valérie and Valérie knows Jennifer, how likely is it that Micheal and Jennifer also know each other? The transitivity percentage, representing this probability, is 14.40%, which is relatively low. What does this mean? Well, it suggests that actors' filming experiences are quite diverse. They aren't necessarily part of tightly connected groups where everyone has worked together. Thus, Michael has low chances of knowing Jennifer! Big loss for Michael …</p>
+                        </li>
+                
+                        <li>
+                            <p><b>Centrality</b><br>There are various methods to spot key players in a graph, and one of them is degree centrality. Think of it as a way to measure importance—kind of like saying, 'The more friends you've got in a social network, the bigger deal you are in that clique.</p>
+                            <p>Let's also analyze the degree centrality distribution. Most actors shared the screen with up to 100 other performers, but hold your popcorn - some influencers here co-starred with more than 400 other actors!</p>
+                        </li>
+                
+                        <li>
+                            <p><b>Betweenness</b><br>Another way to spot important nodes is through betweenness centrality: It measures how much the node plays the role of a bridge. The higher the betweenness, the more the node is essential to move quickly in the graph. The top 5 are...</p>
+                        </li>
+                    </ul>
+
+                    <p>Hopefully, you’ve made it through the avalanche of information. Now, let’s detect some communities!</p>
+                    
+                    <p>We can see that the network forms distinct communities with strong internal connections and weaker connections between them, implying limited collaboration among actors from different communities. These communities represent film industries and various genres present in our different countries.</p>
+
+                    <p>And remember our friends from Japan? Click the button to revisit the country communities. Turns out, the Japanese aren't just one group; they're split into the Anime and East Asian Cinema genres.</p>
+
+                    <p>Grab your director's chair; we're about to embark on the final act of our network analysis blockbuster! We're now diving into the global film scene, exploring the thrilling world of movie co-productions across different countries. </p>
+
+                    <p>Let’s have a look at which countries most commonly team up. </p>
+
+                    <p>In the world map above, the size of nodes in each country represents the number of movies filmed there, while the thickness of the edges indicates the number of movies co-produced in the connected countries.</p>
+
+                    <p>We can see that international collaboration really took off after 1950, and the trends in co-production are constantly changing. So the landscape of co-production might change in the next few years. Keep an eye on it!</p>
+
+                </div>
+
                 <div id="oscars" class="section scrollspy">
-                    <h2>Oscars</h2>
+                    <h2>Oscars Analysis</h2>
                     
                     <p>Woah, this has been a ride! Now, for the grand finale of our analysis, let's peek into the ultimate proof of success: the Oscars!</p>
                     
-                    <p>First, let's refresh our memory on the Oscars:</p>
+                    <!-- <p>First, let's refresh our memory on the Oscars:</p> -->
                     
-                    <p>The Academy Awards, commonly known as the Oscars, have honored the film industry's finest performances since 1929. The acting categories, designed for gender equity, include:</p>
+                    <!-- <p>The Academy Awards, commonly known as the Oscars, have honored the film industry's finest performances since 1929. The acting categories, designed for gender equity, include:</p> -->
                     
-                    <ul>
+                    <!-- <ul>
                         <li>Actor in a Leading Role: Since 1929, this category has celebrated the artistry of male actors in leading roles.</li>
                         <li>Actress in a Leading Role: Parallel to the actors, female actresses have been honored for leading roles since the inception of the Oscars.</li>
                         <li>Actor in a Supporting Role: Introduced in 1937, this category recognizes the contributions of male actors in supporting roles.</li>
                         <li>Actress in a Supporting Role: Also established in 1937, it acknowledges the talent of female actresses in supporting roles.</li>
                     </ul>
                     
-                    <p>Each category features five nominees annually, totaling 20 acting nominations each year. Winners are chosen by the Academy of Motion Picture Arts and Sciences' voting members, one for each category.</p>
+                    <p>Each category features five nominees annually, totaling 20 acting nominations each year. Winners are chosen by the Academy of Motion Picture Arts and Sciences' voting members, one for each category.</p> -->
                     
-                    <p>Now, with our newfound expertise in Oscars, let's dive into the first act of our Oscar journey. We're investigating whether an actor's gender may influence their career trajectory in terms of Oscar nominations and wins.</p>
+                    <!-- <p>Now, with our newfound expertise in Oscars, let's dive into the first act of our Oscar journey. We're investigating whether an actor's gender may influence their career trajectory in terms of Oscar nominations and wins.</p> -->
                     
+                    <p>In this annual ceremony, 20 actors are nominated across four categories: Leading Role and Supporting Role, for each gender. Our mission? Investigating whether an actor's gender may have an impact on their career trajectory in terms of Oscar nominations and wins.</p>
+
                     <object type="text/html" data="/epfl-ada-datastory/graphs/oscars-analysis-movies-before-first-nomination.html" width="100%" height="400px">
                         <p>Unable to load the included file.</p>
                     </object>
@@ -329,13 +409,13 @@
                     
                     <img class="responsive-img" alt="Number of movies per gender" src="/epfl-ada-datastory/images/oscars-analysis-total-movies.png">
                     
-                    <p>Interestingly, the data indicates that, on average, male actors appear in more films than their female counterparts, which is further reinforced by a second Mann-Whitney U test. This may contribute to a fiercer competition among male actors for those coveted Oscar nominations, considering the even playing field in annual nomination counts across gender-specific acting categories.</p>
+                    <p>Interestingly, the data indicates that, on average, male actors appear in more films than their female counterparts. This may contribute to a fiercer competition among male actors for those coveted Oscar nominations, considering the even playing field in annual nomination counts across gender-specific acting categories.</p>
                     
                     <p>Next up on our Oscar exploration: the thrilling journey from nomination to victory. Let's take a peek at the distribution of the number of nominations before an actor clinches the coveted Oscar.</p>
                     
                     <img class="responsive-img" alt="Nominations before first Oscar" src="/epfl-ada-datastory/images/oscars-analysis-nominations-before-first-oscar.png">
                     
-                    <p>The histogram paints a picture of a comparably paced journey for both male and female actors. A quick U-test reassures us that there's no significant statistical difference between the two genders. But of course, this was expected, given that male and female actors compete in separate categories with an equal number of annual nominations.</p>
+                    <p>The histogram paints a picture of a comparably paced journey for both male and female actors. This was expected, given that male and female actors compete in separate categories with an equal number of annual nominations.</p>
                     
                     <p>On more of a side note, we can notice that this distribution follows a seemingly exponential decay: most actors seem to get just one shot at the golden statue, with very few managing to secure victory after being nominated more than twice.</p>
                     
@@ -345,13 +425,13 @@
                         <p>Unable to load the included file.</p>
                     </object>
                     
-                    <p>So, the median number of movies stands at 17 for male actors and 11 for their female counterparts, suggesting a distinct pace in reaching the pinnacle of their careers. The U-test outcome adds weight to this observation, with a p-value below the 0.05 significance threshold. This pattern aligns with our earlier findings—female actors tend to nab nominations and wins earlier in their careers compared to their male counterparts, who face more competition and a longer journey to that elusive first Oscar victory.</p>
+                    <p>So, the median number of movies stands at 17 for male actors and 11 for their female counterparts, suggesting a distinct pace in reaching the pinnacle of their careers. This pattern aligns with our earlier findings - female actors tend to nab nominations and wins earlier in their careers compared to their male counterparts, who face more competition and a longer journey to that elusive first Oscar victory.</p>
                     
                     <p>Furthermore, a noteworthy insight emerges: a significant portion of actors clinch their first Oscar after a relatively modest number of movie appearances. This hints at the industry's inclination to reward promising newcomers, emphasizing the likelihood of actors winning an Oscar for their breakthrough performance rather than a later endeavor.</p>
                     
                     <p>And now, for the grand finale of our analysis! Given our earlier revelation that female actors often kick-start their careers earlier than their male counterparts, the burning question emerges: Does this early start translate into clinching that coveted Oscar at a younger age for our talented actresses?</p>
                     
-                    <object type="text/html" data="/epfl-ada-datastory/graphs/oscars-analysis-age-before-first-oscar.html" width="100%" height="400px">
+                    <!-- <object type="text/html" data="/epfl-ada-datastory/graphs/oscars-analysis-age-before-first-oscar.html" width="100%" height="400px">
                         <p>Unable to load the included file.</p>
                     </object>
                     
@@ -360,16 +440,22 @@
                     <p>This age-related twist unveils a subtle but significant gender bias in the Oscars landscape. The industry seems to favor actresses in their youthfulness and waits until actors reach their seasoned glory to bestow the coveted Oscar.</p>
                     
                     <p>But, wait, until now, we have only looked at the aggregate distributions of actor ages and movie counts. However, our data spans almost a century since the inception of the Oscars. Let’s take advantage of that and explore that temporal dimension!</p>
-                    
+                     -->
                     <img class="responsive-img" alt="Evolution of the age at first Oscar" src="/epfl-ada-datastory/images/oscars-analysis-age-oscar-evolution.png">
                     
-                    <p>While the age distribution for first-time Oscar winners spans wide, a consistent pattern emerges: male actors generally receive their first Oscar at a later age compared to their female counterparts. Over the decades, we can observe a discernible shift toward older winners, irrespective of gender. This shift may mirror a changing industry perspective that values experience and maturity. Such a shift aligns with the idea that roles with the depth and complexity to garner Oscar recognition are increasingly written for older characters.</p>
+                    <!-- <p>While the age distribution for first-time Oscar winners spans wide, a consistent pattern emerges: male actors generally receive their first Oscar at a later age compared to their female counterparts. Over the decades, we can observe a discernible shift toward older winners, irrespective of gender. This shift may mirror a changing industry perspective that values experience and maturity. Such a shift aligns with the idea that roles with the depth and complexity to garner Oscar recognition are increasingly written for older characters.</p>
                     
                     <p>Outliers like Tatum O'Neal, who remains the youngest ever Oscar winner at age 10, stand in stark contrast to the overall trend. Observing the trend lines, it's apparent that the average age of today's Oscar winners has climbed nearly a decade since the Oscars began. This pattern underscores an evolving industry paradigm that associates the pinnacle of acting achievement with a longer career trajectory.</p>
-                    
+                     -->
+                    <p>While the age distribution for first-time Oscar winners spans wide, a consistent pattern emerges: male actors generally receive their first Oscar at a later age compared to their female counterparts. Over the decades, we can observe a discernible shift toward older winners, irrespective of gender. This trend may reflect a shift in the film industry's values, favoring experience and maturity. Roles warranting Oscar recognition are increasingly tailored for older characters, and the average age of winners has risen significantly since the Oscars' inception, illustrating an evolving industry paradigm that associates the pinnacle of acting achievement with a longer career trajectory.</p>
+                </div>
+            
+            
+                <div id="conclusion" class="section scrollspy">
+                    <h2>Conclusion</h2>
+                    <p>Well, my cinematic companion, congratulations on completing this epic odyssey through the world of actors! You've now earned the prestigious title of an expert in all things actor. Should your hunger for knowledge persist, sail over to our GitHub, crafted with love (and maybe a tear or two). As the curtains close on this adventure, we bid you a fond farewell. Until our virtual paths cross again, happy coding and film buffing!</p>
                 </div>
             </div>
-            
             
             <div class="col l1 hide-on-med-and-down"></div>
             
@@ -381,7 +467,9 @@
                         <li><a href="#introduction">Introduction</a></li>
                         <li><a href="#career-catacterization">Career Characterization</a></li>
                         <li><a href="#genre-exploration">Genres Exploration</a></li>
-                        <li><a href="#oscars">Oscars</a></li>
+                        <li><a href="#network-analysis">Network Analysis</a></li>
+                        <li><a href="#oscars">Oscars Analysis</a></li>
+                        <li><a href="#conclusion">Conclusion</a></li>
                     </ul>
                     
                 </div>
