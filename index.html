@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="https://unpkg.com/image-compare-viewer/dist/image-compare-viewer.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
+
+        /* Add this style block in the head section of your HTML document or in your CSS file */
+        #year-selection-map {
+        /* Change the color property to the desired color */
+        background-color: #337a5c; /* Replace #ff0000 with your preferred color code */
+    }
+
+        #year-selection-map::-webkit-slider-thumb {
+            /* Change the size and other styles as needed */
+            background: url('images/slider.png') center center/cover;
+            border-radius: 50%; /* Make the slider thumb round */        }
         #myDiv {
             margin-bottom: -70px; /* Adjust the value as needed */
             line-height: 1.2;    /* Adjust the value as needed */
@@ -34,8 +45,8 @@
         z-index: 9;
         cursor: ew-resize;
         /* set the appearance of the slider: */
-        width: 5%; /* Set the width of the slider to 100% to cover the entire container */
-        height: 5%; /* Set the height of the slider to 100% to cover the entire container */
+        width: 30px; /* Set the width of the slider to 100% to cover the entire container */
+        height: 30px; /* Set the height of the slider to 100% to cover the entire container */
         background: url('images/5678889.png') center center/cover; /* Use your image as the background */
         border-radius: 50%;
     }
@@ -269,13 +280,13 @@
                     <p>Hold onto your seats! There are some intriguing differences, my friend.</p>
                     
                     <ol start="0">
-                        <li><strong>Steady Builders</strong>. Here, we have our steady career builders. These individuals take their sweet time, adopting a patient and persistent approach to construct their acting legacy. Their journey showcases a gradual but steady increase in movie engagements over an extended period, before gradually dissolving.</li>
+                        <li><b>Steady Builders</b>: Here, we have our steady career builders. These individuals take their sweet time, adopting a patient and persistent approach to construct their acting legacy. Their journey showcases a gradual but steady increase in movie engagements over an extended period, before gradually dissolving.</li>
 
-                        <li><strong>Unsuccessful career-builders</strong>. Once again, this is home to the non-successful folks who just couldn't take off. We get it; building a career is no easy feat. A few movies in, and it's a reluctant farewell.</li>
+                        <li><b>Unsuccessful career-builders</b>: Once again, this is home to the non-successful folks who just couldn't take off. We get it; building a career is no easy feat. A few movies in, and it's a reluctant farewell.</li>
 
-                        <li><strong>Prolific Long-Term Performers</strong>. Now, brace yourselves for the prolific long-term performers. This elite group features heavyweights, a small number of actors boasting a significant number of movies over almost 50 years. These individuals have held their ground in the movie industry across a considerable period.</li>
+                        <li><b>Prolific Long-Term Performers</b>: Now, brace yourselves for the prolific long-term performers. This elite group features heavyweights, a small number of actors boasting a significant number of movies over almost 50 years. These individuals have held their ground in the movie industry across a considerable period.</li>
 
-                        <li><strong>Swift Rise & Fall</strong>. Last but not least, we have the actors that burst onto the scene with a strong start, only to experience a progressive decline over approximately 20 years. It's a tale of ephemeral success followed by a gradual decrease in movie engagements.</li>
+                        <li><b>Swift Rise & Fall</b>: Last but not least, we have the actors that burst onto the scene with a strong start, only to experience a progressive decline over approximately 20 years. It's a tale of ephemeral success followed by a gradual decrease in movie engagements.</li>
                     </ol>
                     
                     <!-- <p>Hold on, the plot thickens. Brace yourselves for a stark reality check – gender inequality is alive and kicking. A mere 9% of women in the Prolific Long-Term Performers, 17% in the Steady Builders, 32% for the Unsuccessful Career Builders and 34% for the Ephemeral Success with Progressive Fade. It's indeed a sobering moment for women in the industry. The battle for equal representation rages on.</p> -->
@@ -284,13 +295,13 @@
                     
                     <p>Now that we've got a handle on the typical career trajectories, let's zoom in on the specifics.</p>
                     
-                    <p>First up, we're curious about the age when actors kick off their cinematic journeys. It appears to hover around 30 years old. Now, one burning question emerges: Is this initiation age different by gender?</p>
+                    <p>First up, we're curious about the age when actors kick off their cinematic journeys. It appears to hover around 25 years old. Now, one burning question emerges: Is this initiation age different by gender?</p>
                     
                     <object type="text/html" data="/epfl-ada-datastory/graphs/career-age-first-appearance.html" width="100%" height="400px">
                         <p>Unable to load the included file.</p>
                     </object>
 
-                    <p>Indeed, breaking it down by gender, we spot some disparities: around 32 for men and 26 for women. Intriguing, right? Let's bring back our trusty tool, the t-test, to confirm the statistical significance. And voila, the p-value makes it official – this difference is indeed statistically significant. But why? Is it because the industry tends to favor younger women?</p>
+                    <p>Indeed, breaking it down by gender, we spot some disparities: around 27 for men and 21 for women. Intriguing, right? Let's bring back our trusty tool, the t-test, to confirm the statistical significance. And voila, the p-value makes it official – this difference is indeed statistically significant. But why? Is it because the industry tends to favor younger women?</p>
                     
                     
                     <!-- <p>Next, let’s break it down by cluster:</p> -->
@@ -355,7 +366,7 @@
                     
                     <p>The figure above lays out the genre compatibilities and incompatibilities from an actor's perspective. It suggests that if you're eyeing a role in fiction or thriller movies, you might have to dabble in a bit of crime. Not feeling the criminal vibes? Comedy and romance may be cozier options!</p>
                     
-                    <p>By clicking on the button above, you can shuffle the rows and columns of the covariance matrix displayed earlier. This will unveil two distinct types of career profiles.</p>
+                    <p>By clicking on Visualization 2, you can shuffle the rows and columns of the covariance matrix displayed earlier. This will unveil two distinct types of career profiles.</p>
                     
                     <ul>
                         <li>In the top-left corner, we have the screen maestros, who effortlessly navigate black-and-white classics, dance through animated whimsy, and weave heartwarming tales of family, comedy and romance.</li>
@@ -513,7 +524,7 @@
 
                     <div class="row">
                         <div class="col s1"></div>
-                        <div class="col s10">
+                        <div class="col s12">
                             <div class="card">
                                 <div class="card-content">
                                     <span class="card-title" id="current-year">1890 - 1900</span>
