@@ -39,6 +39,9 @@
         .img-comp-img img {
         display:block;
         }
+        .center-text {
+        text-align: center;
+    }
 
         .img-comp-slider {
         position: absolute;
@@ -473,30 +476,27 @@
                         </li>
                         <br>
                         <li>
-                            <b>Shortest Path</b><br>The average shortest path between two nodes is 2.78 and the shortest distance between the two most distant nodes is 8. Let's search now for the shortest path between two iconic actors in this complex network, say Meryl Streep and Shahrukh Khan. The challenge is on! And the result is….
+                            <b>Shortest Path</b><br>The average shortest path between two nodes is 2.78 and the shortest distance between the two most distant nodes is 8. Let's for example search for the shortest path between two iconic actors in this complex network, say Meryl Streep and Shahrukh Khan. The challenge is on! And the result is….
                         </li>
                         <img  alt="Shortest Path" src="images/SHortest_path.jpg" width="100%">
                         <li>
-                            <b>Triadic Closure</b><br>Let's take a more social perspective on the network! Triadic Closure, in simple terms, is like saying, "A friend of my friend is my friend." It's about actor connections: if Michael knows Valérie and Valérie knows Jennifer, how likely is it that Micheal and Jennifer also know each other? The transitivity percentage, representing this probability, is 14.40%, which is relatively low. What does this mean? Well, it suggests that actors' filming experiences are quite diverse. They aren't necessarily part of tightly connected groups where everyone has worked together. Thus, Michael has low chances of knowing Jennifer! Big loss for Michael …
+                            <b>Triadic Closure</b><br>Let's take a more social perspective on the network! Triadic Closure, in simple terms, is like saying, "A friend of my friend is my friend." It's about actor connections: if Michael knows Valérie and Valérie knows Jennifer, how likely is it that Michael and Jennifer also know each other? The transitivity percentage, representing this probability, is 14.40%, which is relatively low. What does this mean? Well, it suggests that actors' filming experiences are quite diverse. They aren't necessarily part of tightly connected groups where everyone has worked together. Thus, Michael has low chances of knowing Jennifer! Big loss for Michael …
                         </li>
                         <br>
-                        <li style="margin-bottom: 10px; line-height: 1.2;">
-                            <b>Centrality</b><br>
-                            There are various methods to spot key players in a graph, and one of them is degree centrality. 
-                            Think of it as a way to measure importance—kind of like saying, 'The more friends you've got in a social network, the bigger deal you are in that clique. Let's look at the degree centrality distribution.<br>
-                            <br>
+                        <li style="margin-bottom: 10px">
+                            <b>Centrality</b><br>There are various methods to spot key players in a graph, and one of them is degree centrality. 
+                            Think of it as a way to measure importance—kind of like saying, 'The more friends you've got in a social network, the bigger deal you are in that clique. Let's look at the degree centrality distribution.
                             <object type="text/html" data="graphs/centrality.html" width="100%" height="300px">
                                 <p>Unable to load the included file.</p>
                             </object>
-                        
                             <p>Most actors shared the screen with up to 100 other performers, but hold your popcorn - some influencers here co-starred with more than 400 other actors! And the top 5 are:</p>
-                        </li>
-                        
-                        <img  alt="Central Actors" src="images/Degree.jpg" width="100%">
+                            <img  alt="Central Actors" src="images/Degree.jpg" width="100%">
+                        </li>  
                         <li>
                             <b>Betweenness</b><br>Another way to spot important nodes is through betweenness centrality: It measures how much the node plays the role of a bridge. The higher the betweenness, the more the node is essential to move quickly in the graph. The top 5 are...
                         </li>
                         <img alt="Betweenness Actors" src="images/Betweenness.jpg"  width="100%">
+                        It is interesting to note that these actors are all Indian. They connect the world of Indian cinema to the Western film industry.
                     </ol>
 
                     <p>Hopefully, you’ve made it through the avalanche of information. Now, let’s detect some communities!</p>
@@ -518,7 +518,7 @@
                     
                     <p>And remember our friends from Japan? Slide the cursor <img src="images/5678889.png" width=15px, height=15px> to revisit the country communities. Turns out, the Japanese aren't just one group; they're split into the Anime and East Asian Cinema genres.</p>
 
-                    <p>Grab your director's chair; we're about to embark on the final act of our network analysis blockbuster! We're now diving into the global film scene, exploring the thrilling world of movie co-productions across different countries. </p>
+                    <p>Now grab your director's chair; we're about to embark on the final act of our network analysis blockbuster! We're diving into the global film scene, exploring the thrilling world of movie co-productions across different countries. </p>
 
                     <p>Let’s have a look at which countries most commonly team up. You can change the decade displayed by moving the slider below the image.</p>
 
@@ -630,9 +630,7 @@
                     <h2>Conclusion</h2>
                     <p>Well, my cinematic companion, congratulations on completing this epic odyssey through the world of actors! You've now earned the prestigious title of an expert in all things actor. Should your hunger for knowledge persist, sail over to our GitHub, crafted with love (and maybe a tear or two). As the curtains close on this adventure, we bid you a fond farewell. Until our virtual paths cross again, happy coding and Merry Christmas!</p>
                 </div>
-                <div style="text-align: center;">
-                    <p>Valérie, Michael, Mariem, Jennifer and Adrien</p>
-                </div>
+                <p class="center-text">Valérie, Michael, Mariem, Jennifer and Adrien</p>
 
             </div>
             
