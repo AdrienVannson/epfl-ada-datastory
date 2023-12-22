@@ -220,8 +220,8 @@
                             <div class="row">
                                 <div class="input-field col s12">
                                     <i class="material-icons prefix">textsms</i>
-                                    <input type="text" id="autocomplete-input" class="autocomplete">
-                                    <label for="autocomplete-input">Find your favorite actor</label>
+                                    <input type="text" id="autocomplete-input-profile-seq" class="autocomplete">
+                                    <label for="autocomplete-input-profile-seq">Find your favorite actor</label>
                                 </div>
                             </div>
                         </div>
@@ -329,7 +329,21 @@
                     
                     <p>Now that we've covered the intricate blend of movie genres, let's dive into the fascinating journey of how actors gracefully navigate through these cinematic genres. Our strategy? We will calculate the proportion of movies each actor has taken on in our chosen genres. To keep things meaningful, though, we had to wave goodbye to actors with fewer than 20 movies. Apologies folks, but serious results demand a bit of tough love.</p>
                     
-                    [une liste déroulante ou on peut voir les proportions de genres pour chaque acteurs si possible]
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">textsms</i>
+                                    <input type="text" id="autocomplete-input-genres-props" class="autocomplete">
+                                    <label for="autocomplete-input">Find your favorite actor</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <object id="selected-actor-genres" type="text/html" data="https://www.adrienvannson.fr/epfl-ada-datastory/graphs/genres-props/011_3s.html" width="100%" height="400px">
+                        <p>Unable to load the included file.</p>
+                    </object>
                     
                     <p>Ever wonder if actors freely hop between movie genres or if there's some pattern to their cinematic choices? To crack this mystery, we're studying the correlation of their genre proportions. This will help us unveil whether playing a role in a certain genre clashes with taking on a role in another. For instance, can you picture your favorite comedian actor in a serious drama film? It's like asking a cat to bark, right?</p>
                     
@@ -417,7 +431,6 @@
                     
                     <!-- <p>Last but not least, let's dive into the general trend. It appears our thespians are swapping out their cowboy hats and military gear for action sequences, suspenseful thrillers, and horror escapades. Are they riding the wave of the latest trend, or are our actors just craving a bit more adrenaline on set?</p> -->
                     <p>Let's have a look at that evolution. Post-1930, the talking picture era introduced the challenge of extensive dialogues, coupled with the peak of musicals where actors not only spoke but also carried the melody, transforming acting into a full-body endeavor. Fast forward to the '70s, the era of color TV, actors fearlessly embraced the departure from black-and-white films, bidding adieu to monochrome gigs.</p>
-                
                 </div>
                 
                 <div id="network-analysis" class="section scrollspy">
@@ -437,7 +450,11 @@
                 
                     <p>One important point to observe is that Japanese actors are divided into two groups. We'll figure out the reason behind this split later in the analysis. Stay tuned!</p>
                     
-                    <p>Bonus: if you wonder who is the Australian quadruple in the bottom of the graph:  <button id="showImageButton">Click here!</button></p></p>
+                    <p>Bonus: if you wonder who is the Australian quadruple in the bottom of the graph:</p>
+
+                    <p class="center-align">
+                        <a class="btn" id="showImageButton">Click here!</a>
+                    </p>
 
                     <!-- <button id="showImageButton">Show Image</button> -->
 
@@ -502,17 +519,23 @@
 
                     <p>Let’s have a look at which countries most commonly team up. You can change the decade that is displayed by moving the slider bellow the image.</p>
 
-                    <div class="card">
-                        <div class="card-content">
-                            <span class="card-title" id="current-year">1890 - 1900</span>
-                            <img class="responsive-img" id="map-timelapse" src="/epfl-ada-datastory/images/map/1890_1900.png">
-    
-                            <form action="#" id="forum-year-selection-map">
-                                <p class="range-field">
-                                    <input type="range" id="year-selection-map" min="0" max="11" value="0" oninput="updateMapTimelapse()"/>
-                                </p>
-                            </form>
+                    <div class="row">
+                        <div class="col s1"></div>
+                        <div class="col s10">
+                            <div class="card">
+                                <div class="card-content">
+                                    <span class="card-title" id="current-year">1890 - 1900</span>
+                                    <img class="responsive-img" id="map-timelapse" src="/epfl-ada-datastory/images/map/1890_1900.png">
+            
+                                    <form action="#" id="forum-year-selection-map">
+                                        <p class="range-field">
+                                            <input type="range" id="year-selection-map" min="0" max="11" value="0" oninput="updateMapTimelapse()"/>
+                                        </p>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
+                        <div class="col s1"></div>
                     </div>
 
                     <p>In the world map above, the size of nodes in each country represents the number of movies filmed there, while the thickness of the edges indicates the number of movies co-produced in the connected countries.</p>
@@ -604,6 +627,7 @@
                     <h2>Conclusion</h2>
                     <p>Well, my cinematic companion, congratulations on completing this epic odyssey through the world of actors! You've now earned the prestigious title of an expert in all things actor. Should your hunger for knowledge persist, sail over to our GitHub, crafted with love (and maybe a tear or two). As the curtains close on this adventure, we bid you a fond farewell. Until our virtual paths cross again, happy coding and film buffing!</p>
                 </div>
+
             </div>
             
             <div class="col l1 hide-on-med-and-down"></div>
@@ -648,7 +672,7 @@
                     };
                 });
                 
-                M.Autocomplete.init(document.querySelectorAll('.autocomplete'), {
+                M.Autocomplete.init(document.querySelectorAll('#autocomplete-input-profile-seq'), {
                     minLength: 1,
                     data: autocompletion_data,
                     onSearch: (text, autocomplete) => {
@@ -665,6 +689,46 @@
                             
                             var elem = document.getElementById("selected-actor-career");
                             elem.setAttribute("data", "https://www.adrienvannson.fr/epfl-ada-datastory/graphs/profile-sequences/" + id + ".html")
+                        }
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+
+            fetch("data-genre-props.json")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Network response was not ok: ${response.statusText}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                autocompletion_data = data.map(d => {
+                    return {
+                        id: d.id,
+                        text: d.name
+                    };
+                });
+                
+                M.Autocomplete.init(document.querySelectorAll('#autocomplete-input-genres-props'), {
+                    minLength: 1,
+                    data: autocompletion_data,
+                    onSearch: (text, autocomplete) => {
+                        const normSearch = text.toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+                        autocomplete.setMenuItems(
+                            autocomplete.options.data
+                                .filter((option) => option.text?.toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(normSearch))
+                                .slice(0, 10)
+                        );
+                    },
+                    onAutocomplete: e => {
+                        if (e.length) {
+                            var id = e[0].id;
+                            
+                            var elem = document.getElementById("selected-actor-genres");
+                            elem.setAttribute("data", "https://www.adrienvannson.fr/epfl-ada-datastory/graphs/genres-props/" + id + ".html")
                         }
                     }
                 });
