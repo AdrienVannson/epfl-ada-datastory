@@ -129,11 +129,12 @@
                     
                     <p>First up, we're curious about the age when actors kick off their cinematic journeys. It appears to hover around 30 years old. Now, one burning question emerges: Is this initiation age different by gender?</p>
                     
-                    <p>Indeed, breaking it down by gender, we spot some disparities: around 32 for men and 26 for women. Intriguing, right? Let's bring back our trusty tool, the t-test, to confirm the statistical significance. And voila, the p-value makes it official – this difference is indeed statistically significant. But why? Is it because the industry tends to favor younger women?</p>
-                    
                     <object type="text/html" data="/epfl-ada-datastory/graphs/career-age-first-appearance.html" width="100%" height="400px">
                         <p>Unable to load the included file.</p>
                     </object>
+
+                    <p>Indeed, breaking it down by gender, we spot some disparities: around 32 for men and 26 for women. Intriguing, right? Let's bring back our trusty tool, the t-test, to confirm the statistical significance. And voila, the p-value makes it official – this difference is indeed statistically significant. But why? Is it because the industry tends to favor younger women?</p>
+                    
                     
                     <!-- <p>Next, let’s break it down by cluster:</p> -->
                     
@@ -157,15 +158,15 @@
                     
                     [insert pie chart of genres by gender] 
                     
-                    <p>This was a small teaser for the continuation of our analysis. In this section, we will delve into how our beloved actors are scattered across the vast landscape of genres. Our preprocessing allowed us to unveil 26 main different genres in our dataset. Now, here's the twist—most movies find themselves embracing more than one genre, as you can see below.</p>
+                    <p>This was a small teaser for the continuation of our analysis. In this section, we will delve into how our beloved actors are scattered across the vast landscape of genres. Our preprocessing allowed us to unveil 26 main different genres in our dataset. Now, here's the twist—most movies find themselves embracing more than one genre.</p>
                     
-                    <img class="responsive-img" alt="Distribution of the number of genres per film" src="/epfl-ada-datastory/images/genres-number-of-genres-distribution.png">
+                    <!-- <img class="responsive-img" alt="Distribution of the number of genres per film" src="/epfl-ada-datastory/images/genres-number-of-genres-distribution.png"> -->
                     
                     <p>Therefore, for a more detailed picture, let’s start by exploring which of those 26 genres often go hand in hand. For each genre, the heatmap below showcases the probability of being associated with another genre in the corresponding column. The diagonal indicates the likelihood of being the sole genre present in the movie. Interestingly, most genres are frequently linked to the Drama genre, the undisputed champion in our dataset - around 50% of the movies are in the dramatic club.</p>
                     
                     <img class="responsive-img" alt="Probability of genres co-occurences" src="/epfl-ada-datastory/images/genres-heatmap-cooccurences.png">
                     
-                    <p>The mysterious white square in the above figure represents the Science Fiction enthusiasts among us. We've made the daring decision to split the genre into Science and Fiction. Unthinkable 😨! As you can see, the Science genre is practically inseparable from Fiction, but the reverse is not true. So, Sci-Fi fans, don't worry; you're fully included in the Science genre.</p>
+                    <!-- <p>The mysterious white square in the above figure represents the Science Fiction enthusiasts among us. We've made the daring decision to split the genre into Science and Fiction. Unthinkable 😨! As you can see, the Science genre is practically inseparable from Fiction, but the reverse is not true. So, Sci-Fi fans, don't worry; you're fully included in the Science genre.</p> -->
                     
                     <p>Now that we've covered the intricate blend of movie genres, let's dive into the fascinating journey of how actors gracefully navigate through these cinematic genres. Our strategy? We will calculate the proportion of movies each actor has taken on in our chosen genres. To keep things meaningful, though, we had to wave goodbye to actors with fewer than 20 movies. Apologies folks, but serious results demand a bit of tough love.</p>
                     
@@ -192,9 +193,9 @@
                     
                     <p>By clicking on the button above, you can shuffle the rows and columns of the covariance matrix displayed earlier. This will unveil two distinct types of career profiles.</p>
                     
-                    <p>In the top-left corner, screen maestros effortlessly navigate black-and-white classics, dance through animated whimsy, and weave heartwarming tales of family and romance. Armed with rose-colored lenses, they paint a cinematic world inviting audiences to embrace the lighter side—with comedy, fantasy, romance, and musicals.</p>
+                    <p>In the top-left corner, we have the screen maestros, who effortlessly navigate black-and-white classics, dance through animated whimsy, and weave heartwarming tales of family, comedy and romance.</p>
                     
-                    <p>Venturing yourself to the intense bottom-right corner is quite courageous! Here, actors command the stage with compelling intensity, diving into drama, war, thriller, horror, and crime. Masters of suspense, they captivate with performances evoking fear, anticipation, and raw emotion.</p>
+                    <p>Venturing yourself to the intense bottom-right corner is quite courageous! Here, actors command the stage with compelling intensity, diving into drama, war, thriller, horror, and crime.</p>
                     
                     <p>And right in the middle, the documentary genre, playing the peacemaker between the chill vibes and the heart-pounding suspense. It's the swiss genre, where actors of all genres can gather, as it remains uncorrelated to most of the other genres.</p>
                     
@@ -221,33 +222,35 @@
                     
                     <img class="responsive-img" alt="Ethnicities across clusters" src="/epfl-ada-datastory/images/genres-ethnicities-across-clusters.png">
                     
-                    <p>Alright, actors have their pick of various genres, some of which pair up like a dream, while others might not hit the right note. But here's the burning question: To what extent do our actors delve into the diverse world of genres? </p>
+                    <!-- <p>Alright, actors have their pick of various genres, some of which pair up like a dream, while others might not hit the right note. But here's the burning question: To what extent do our actors delve into the diverse world of genres? </p> -->
                     
-                    <p>To answer this, we will use the Normalized Hill's Herfindahl Index (NHHI) as suggested into the following article <a href="https://www.mdpi.com/2227-7390/11/5/1252">An Analysis of Actors in Malay Films: Small Worlds, Centralities and Genre Diversity</a>. Typically used in economics the HHI-score measures market concentration - how much a few companies dominate the production of a good or service. In our scenario, we're replacing the different companies producing a good or service with the genres played by an actor. Using the normalized version of this index, we obtain a genre diversity score for each actor, ranging from 0 to 1. The higher the score, the more our actors have explored a myriad of genres.</p>
+                    <!-- <p>To answer this, we will use the Normalized Hill's Herfindahl Index (NHHI) as suggested into the following article <a href="https://www.mdpi.com/2227-7390/11/5/1252">An Analysis of Actors in Malay Films: Small Worlds, Centralities and Genre Diversity</a>. Typically used in economics the HHI-score measures market concentration - how much a few companies dominate the production of a good or service. In our scenario, we're replacing the different companies producing a good or service with the genres played by an actor. Using the normalized version of this index, we obtain a genre diversity score for each actor, ranging from 0 to 1. The higher the score, the more our actors have explored a myriad of genres.</p> -->
                     
-                    <p>Let’s first have a look at the genre diversity distribution:</p>
+                    <!-- <p>Let’s first have a look at the genre diversity distribution:</p> -->
                     
-                    <img class="responsive-img" alt="NHHI distribution" src="/epfl-ada-datastory/images/genres-nhhi-distribution.png">
+                    <!-- <img class="responsive-img" alt="NHHI distribution" src="/epfl-ada-datastory/images/genres-nhhi-distribution.png"> -->
                     
-                    <p>Our actors seem pretty curious with an average genre diversity score of 89%, which is equivalent to embarking on a journey through 7 distinct genres with equal enthusiasm. However, it appears that some actors are a bit chicken-hearted in this regard. Let's sneak a peek at the actors who have bravely pirouetted into more genres and those who are treading a bit more cautiously.</p>
+                    <!-- <p>Our actors seem pretty curious with an average genre diversity score of 89%, which is equivalent to embarking on a journey through 7 distinct genres with equal enthusiasm. However, it appears that some actors are a bit chicken-hearted in this regard. Let's sneak a peek at the actors who have bravely pirouetted into more genres and those who are treading a bit more cautiously.</p> -->
                     
-                    <img class="responsive-img" alt="Genres of some actors" src="/epfl-ada-datastory/images/genres-nhhi-actors.png">
+                    <!-- <img class="responsive-img" alt="Genres of some actors" src="/epfl-ada-datastory/images/genres-nhhi-actors.png"> -->
                     
-                    <p>What you see above is, therefore, the genre distribution for actors with the highest and lowest genre diversity scores. Now, one might argue "Well, isn't this just a sneaky way of counting how many movies an actor plays a role in?" Nope, our analysis revealed no correlations between this score and the number of movies an actor has made. So, playing in more movies doesn't turn an actor into a genre explorer. </p>
+                    <!-- <p>What you see above is, therefore, the genre distribution for actors with the highest and lowest genre diversity scores. Now, one might argue "Well, isn't this just a sneaky way of counting how many movies an actor plays a role in?" Nope, our analysis revealed no correlations between this score and the number of movies an actor has made. So, playing in more movies doesn't turn an actor into a genre explorer. </p> -->
                     
-                    <p>To wrap up this genre adventure, let's take on an ambitious challenge and attempt to create the typical genre distribution of an actor in the movie industry across different time periods. To embark on this cinematic journey, we create a Markov chain of genre transitions, mapping out how our actors gracefully leap from one genre to another during their genre-hopping escapade.</p>
-                    
-                    [image]
-                    
-                    <p>And now, for the grand finale, let's release our actors to whimsically wander along the currents of the Markov river, carried away by its cinematic magic. The result? The steady states, showcasing the unique genre distributions at different epochs.</p>
+                    <p>To wrap up this genre adventure, let's take on an ambitious challenge and attempt to create the typical genre distribution of an actor in the movie industry across different time periods. To embark on this last cinematic journey, we create a Markov chain of genre transitions, mapping out how our actors gracefully leap from one genre to another during their genre-hopping escapade.</p>
                     
                     [image]
                     
-                    <p>Post-1930, the era of talking pictures, and actors had to do more than strike a pose – they had to really talk, and not just in whispers. Extended dialogues became the norm. Tough gig! This period also marked the peak of musicals. Actors weren't just speaking; they had to bring the melody. Acting became a full-body job.</p>
+                    <p>And now, for the grand finale, let's release our actors to whimsically wander along the currents of the Markov river, carried away by its cinematic magic. The result? The steady states, revealing distinctive genre distributions. In other words, it illustrates how actors allocate their time across various genres during different periods.</p>
                     
-                    <p>Fast forward to the groovy '70s, the age of color TV. Actors ditched the black-and-white film scene entirely. No more monochrome gigs for these trendsetters!</p>
+                    [image]
                     
-                    <p>Last but not least, let's dive into the general trend. It appears our thespians are swapping out their cowboy hats and military gear for action sequences, suspenseful thrillers, and horror escapades. Are they riding the wave of the latest trend, or are our actors just craving a bit more adrenaline on set?</p>
+                    <!-- <p>Post-1930, the era of talking pictures, and actors had to do more than strike a pose – they had to really talk, and not just in whispers. Extended dialogues became the norm. Tough gig! This period also marked the peak of musicals. Actors weren't just speaking; they had to bring the melody. Acting became a full-body job.</p> -->
+                    
+                    <!-- <p>Fast forward to the groovy '70s, the age of color TV. Actors ditched the black-and-white film scene entirely. No more monochrome gigs for these trendsetters!</p> -->
+                    
+                    <!-- <p>Last but not least, let's dive into the general trend. It appears our thespians are swapping out their cowboy hats and military gear for action sequences, suspenseful thrillers, and horror escapades. Are they riding the wave of the latest trend, or are our actors just craving a bit more adrenaline on set?</p> -->
+                    <p>Let's have a look at that evolution. Post-1930, the talking picture era introduced the challenge of extensive dialogues, coupled with the peak of musicals where actors not only spoke but also carried the melody, transforming acting into a full-body endeavor. Fast forward to the '70s, the era of color TV, actors fearlessly embraced the departure from black-and-white films, bidding adieu to monochrome gigs.</p>
+                
                 </div>
                 
                 <div id="oscars" class="section scrollspy">
