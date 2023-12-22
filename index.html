@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="https://unpkg.com/image-compare-viewer/dist/image-compare-viewer.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
+        #myDiv {
+            margin-bottom: -70px; /* Adjust the value as needed */
+            line-height: 1.2;    /* Adjust the value as needed */
+        }
         * {box-sizing: border-box;}
 
         @font-face {
@@ -71,8 +75,113 @@
             font-family: 'fonttitle', sans-serif; /* Replace 'Arial' with your preferred font */
             margin-left: 2rem !important; /* Adjust the left margin */
         }
+        .img-comp-container {
+         position: relative;
+         height: 700px; /*should be the same height as the images*/
+         }
+
+         .img-comp-img {
+         position: absolute;
+         width: auto;
+         height: auto;
+         overflow:hidden;
+         }
+
+         .img-comp-img img {
+         display:block;
+         }
+
+         .img-comp-slider {
+         position: absolute;
+         z-index: 9;
+         cursor: ew-resize;
+         /* set the appearance of the slider: */
+         width: 5%; /* Set the width of the slider to 100% to cover the entire container */
+         height: 5%; /* Set the height of the slider to 100% to cover the entire container */
+         background: url('images/5678889.png') center center/cover; /* Use your image as the background */
+         border-radius: 50%;
+     }
     </style>
+    <script>
+        function initComparisons() {
+          var x, i;
+          /*find all elements with an "overlay" class:*/
+          x = document.getElementsByClassName("img-comp-overlay");
+          for (i = 0; i < x.length; i++) {
+            /*once for each "overlay" element:
+            pass the "overlay" element as a parameter when executing the compareImages function:*/
+            compareImages(x[i]);
+          }
+          function compareImages(img) {
+            var slider, img, clicked = 0, w, h;
+            /*get the width and height of the img element*/
+            w = img.offsetWidth;
+            h = img.offsetHeight;
+            /*set the width of the img element to 50%:*/
+            img.style.width = 0 + "px";
+            /*create slider:*/
+            slider = document.createElement("DIV");
+            slider.setAttribute("class", "img-comp-slider");
+            /*insert slider*/
+            img.parentElement.insertBefore(slider, img);
+            /*position the slider in the middle:*/
+            slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+            slider.style.left = 0 + "px";
+            /*execute a function when the mouse button is pressed:*/
+            slider.addEventListener("mousedown", slideReady);
+            /*and another function when the mouse button is released:*/
+            window.addEventListener("mouseup", slideFinish);
+            /*or touched (for touch screens:*/
+            slider.addEventListener("touchstart", slideReady);
+            /*and released (for touch screens:*/
+            window.addEventListener("touchend", slideFinish);
+            function slideReady(e) {
+              /*prevent any other actions that may occur when moving over the image:*/
+              e.preventDefault();
+              /*the slider is now clicked and ready to move:*/
+              clicked = 1;
+              /*execute a function when the slider is moved:*/
+              window.addEventListener("mousemove", slideMove);
+              window.addEventListener("touchmove", slideMove);
+            }
+            function slideFinish() {
+              /*the slider is no longer clicked:*/
+              clicked = 0;
+            }
+            function slideMove(e) {
+              var pos;
+              /*if the slider is no longer clicked, exit this function:*/
+              if (clicked == 0) return false;
+              /*get the cursor's x position:*/
+              pos = getCursorPos(e)
+              /*prevent the slider from being positioned outside the image:*/
+              if (pos < 0) pos = 0;
+              if (pos > w) pos = w;
+              /*execute a function that will resize the overlay image according to the cursor:*/
+              slide(pos);
+            }
+            function getCursorPos(e) {
+              var a, x = 0;
+              e = (e.changedTouches) ? e.changedTouches[0] : e;
+              /*get the x positions of the image:*/
+              a = img.getBoundingClientRect();
+              /*calculate the cursor's x coordinate, relative to the image:*/
+              x = e.pageX - a.left;
+              /*consider any page scrolling:*/
+              x = x - window.pageXOffset;
+              return x;
+            }
+            function slide(x) {
+              /*resize the image:*/
+              img.style.width = x + "px";
+              /*position the slider:*/
+              slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+            }
+          }
+        }
+        </script>
 </head>
+
 
 <body>
     <div class="navbar-fixed">
@@ -159,15 +268,16 @@
                     
                     <p>Hold onto your seats! There are some intriguing differences, my friend.</p>
                     
-                    <ul>
-                        <li>Cluster 0: <strong>Steady Builders</strong>. Here, we have our steady career builders. These individuals take their sweet time, adopting a patient and persistent approach to construct their acting legacy. Their journey showcases a gradual but steady increase in movie engagements over an extended period, before gradually dissolving.</li>
+                    <ol start="0">
+                        <li><strong>Steady Builders</strong>. Here, we have our steady career builders. These individuals take their sweet time, adopting a patient and persistent approach to construct their acting legacy. Their journey showcases a gradual but steady increase in movie engagements over an extended period, before gradually dissolving.</li>
                         
-                        <li>Cluster 1: <strong>Unsuccessful career-builders</strong>. Once again, this is home to the non-successful folks who just couldn't take off. We get it; building a career is no easy feat. A few movies in, and it's a reluctant farewell.</li>
+                        <li><strong>Unsuccessful career-builders</strong>. Once again, this is home to the non-successful folks who just couldn't take off. We get it; building a career is no easy feat. A few movies in, and it's a reluctant farewell.</li>
                         
-                        <li>Cluster 2: <strong>Prolific Long-Term Performers</strong>. Now, brace yourselves for the prolific long-term performers. This elite group features heavyweights, a small number of actors boasting a significant number of movies over almost 50 years. These individuals have held their ground in the movie industry across a considerable period.</li>
+                        <li><strong>Prolific Long-Term Performers</strong>. Now, brace yourselves for the prolific long-term performers. This elite group features heavyweights, a small number of actors boasting a significant number of movies over almost 50 years. These individuals have held their ground in the movie industry across a considerable period.</li>
                         
-                        <li>Cluster 3: <strong>Swift Rise & Fall</strong>. Last but not least, we have the actors that burst onto the scene with a strong start, only to experience a progressive decline over approximately 20 years. It's a tale of ephemeral success followed by a gradual decrease in movie engagements.</li>
-                    </ul>
+                        <li><strong>Swift Rise & Fall</strong>. Last but not least, we have the actors that burst onto the scene with a strong start, only to experience a progressive decline over approximately 20 years. It's a tale of ephemeral success followed by a gradual decrease in movie engagements.</li>
+                    
+                    </0l>
                     
                     <!-- <p>Hold on, the plot thickens. Brace yourselves for a stark reality check – gender inequality is alive and kicking. A mere 9% of women in the Prolific Long-Term Performers, 17% in the Steady Builders, 32% for the Unsuccessful Career Builders and 34% for the Ephemeral Success with Progressive Fade. It's indeed a sobering moment for women in the industry. The battle for equal representation rages on.</p> -->
                     
@@ -275,37 +385,30 @@
                     
                     <p>Check them out below!</p>
                     
-                    <img class="responsive-img" alt="Methoids of the different clusters" src="/epfl-ada-datastory/images/genres-clusters-methoids.png">
+                    <object type="text/html" data="graphs/clusterval.html" width="100%" height="600px">
+                        <p>Unable to load the included file.</p>
+                    </object>
                     
                     <p>Let's delve into the most distinct traits of each cluster, kicking off with the birth years of our beloved actors. Cluster 0 and 4 are like a time capsule, housing performers from the early 20th century. As for the others, they're still in the running for the "living" category. It's crucial to note that the clustering was based solely on genre proportions. This uncovers the intriguing fact that actors from different eras weren't necessarily stepping into the same movie genres. As the movie industry evolved over time, it forced actors to follow the trend.</p>
-                    
-                    <img class="responsive-img" alt="Birth years across clusters" src="/epfl-ada-datastory/images/genres-birth-years-across-clusters.png">
-                    
+                    <object type="text/html" data="graphs/clusterboxval.html" width="100%" height="400px">
+                        <p>Unable to load the included file.</p>
+                    </object>
                     <p>Now, let's cast our eyes on the most common ethnicities within the various clusters. Cluster 1, representing the actors of world cinema, is throwing a Bollywood fiesta, mainly hosting actors from the Indian regions. Though, a tiny troupe of Germans seems to have taken a detour and joined the party. Meanwhile, in the other clusters, the majority of our actors proudly wear the American badge or belong to the Jewish community.</p>
-                    
-                    <img class="responsive-img" alt="Ethnicities across clusters" src="/epfl-ada-datastory/images/genres-ethnicities-across-clusters.png">
-                    
-                    <!-- <p>Alright, actors have their pick of various genres, some of which pair up like a dream, while others might not hit the right note. But here's the burning question: To what extent do our actors delve into the diverse world of genres? </p> -->
-                    
-                    <!-- <p>To answer this, we will use the Normalized Hill's Herfindahl Index (NHHI) as suggested into the following article <a href="https://www.mdpi.com/2227-7390/11/5/1252">An Analysis of Actors in Malay Films: Small Worlds, Centralities and Genre Diversity</a>. Typically used in economics the HHI-score measures market concentration - how much a few companies dominate the production of a good or service. In our scenario, we're replacing the different companies producing a good or service with the genres played by an actor. Using the normalized version of this index, we obtain a genre diversity score for each actor, ranging from 0 to 1. The higher the score, the more our actors have explored a myriad of genres.</p> -->
-                    
-                    <!-- <p>Let’s first have a look at the genre diversity distribution:</p> -->
-                    
-                    <!-- <img class="responsive-img" alt="NHHI distribution" src="/epfl-ada-datastory/images/genres-nhhi-distribution.png"> -->
-                    
-                    <!-- <p>Our actors seem pretty curious with an average genre diversity score of 89%, which is equivalent to embarking on a journey through 7 distinct genres with equal enthusiasm. However, it appears that some actors are a bit chicken-hearted in this regard. Let's sneak a peek at the actors who have bravely pirouetted into more genres and those who are treading a bit more cautiously.</p> -->
-                    
-                    <!-- <img class="responsive-img" alt="Genres of some actors" src="/epfl-ada-datastory/images/genres-nhhi-actors.png"> -->
-                    
-                    <!-- <p>What you see above is, therefore, the genre distribution for actors with the highest and lowest genre diversity scores. Now, one might argue "Well, isn't this just a sneaky way of counting how many movies an actor plays a role in?" Nope, our analysis revealed no correlations between this score and the number of movies an actor has made. So, playing in more movies doesn't turn an actor into a genre explorer. </p> -->
+                    <object id="myDiv" type="text/html" data="graphs/clusterethnicities.html" width="100%" height="600px">
+                        <p>Unable to load the included file.</p>
+                    </object>
                     
                     <p>To wrap up this genre adventure, let's take on an ambitious challenge and attempt to create the typical genre distribution of an actor in the movie industry across different time periods. To do so, we create a Markov chain of genre transitions, mapping out how our actors gracefully leap from one genre to another during their genre-hopping escapade.</p>
                     
-                    [image]
+                    <object type="text/html" data="/epfl-ada-datastory/graphs/genres-markov.html" width="100%" height="800px">
+                        <p>Unable to load the included file.</p>
+                    </object>
                     
                     <p>And now, for the grand finale, let's release our actors to whimsically wander along the currents of the Markov river, carried away by its cinematic magic. The result? The steady states, revealing distinctive genre distributions. In other words, it illustrates how actors allocate their time across various genres during different periods.</p>
                     
-                    [image]
+                    <object type="text/html" data="/epfl-ada-datastory/graphs/genres-steady-state-distribution.html" width="100%" height="400px">
+                        <p>Unable to load the included file.</p>
+                    </object>
                     
                     <!-- <p>Post-1930, the era of talking pictures, and actors had to do more than strike a pose – they had to really talk, and not just in whispers. Extended dialogues became the norm. Tough gig! This period also marked the peak of musicals. Actors weren't just speaking; they had to bring the melody. Acting became a full-body job.</p> -->
                     
@@ -332,7 +435,7 @@
                 
                     <p>One important point to observe is that Japanese actors are divided into two groups. We'll figure out the reason behind this split later in the analysis. Stay tuned!</p>
                     
-                    <p>Bonus: if you wonder who is the Australian quadruple in the bottom of the graph:</p>
+                    <p><b>Bonus:</b> if you wonder who is the Australian quadruple in the bottom of the graph:</p>
 
                     <p class="center-align">
                         <a class="btn" id="showImageButton">Click here!</a>
@@ -367,10 +470,18 @@
                             <b>Triadic Closure</b><br>Let's take a more social perspective on the network! Triadic Closure, in simple terms, is like saying, "A friend of my friend is my friend." It's about actor connections: if Michael knows Valérie and Valérie knows Jennifer, how likely is it that Micheal and Jennifer also know each other? The transitivity percentage, representing this probability, is 14.40%, which is relatively low. What does this mean? Well, it suggests that actors' filming experiences are quite diverse. They aren't necessarily part of tightly connected groups where everyone has worked together. Thus, Michael has low chances of knowing Jennifer! Big loss for Michael …
                         </li>
                         <br>
-                        <li>
-                            <b>Centrality</b><br>There are various methods to spot key players in a graph, and one of them is degree centrality. Think of it as a way to measure importance—kind of like saying, 'The more friends you've got in a social network, the bigger deal you are in that clique.
-                            <br>Let's also analyze the degree centrality distribution. Most actors shared the screen with up to 100 other performers, but hold your popcorn - some influencers here co-starred with more than 400 other actors!
+                        <li style="margin-bottom: 10px; line-height: 1.2;">
+                            <b>Centrality</b><br>
+                            There are various methods to spot key players in a graph, and one of them is degree centrality. 
+                            Think of it as a way to measure importance—kind of like saying, 'The more friends you've got in a social network, the bigger deal you are in that clique. Let's look at the degree centrality distribution.<br>
+                            <br>
+                            <object type="text/html" data="graphs/centrality.html" width="100%" height="300px">
+                                <p>Unable to load the included file.</p>
+                            </object>
+                        
+                            <p>Most actors shared the screen with up to 100 other performers, but hold your popcorn - some influencers here co-starred with more than 400 other actors! And the top 5 are:</p>
                         </li>
+                        
                         <img  alt="Central Actors" src="images/Degree.jpg" width="100%">
                         <li>
                             <b>Betweenness</b><br>Another way to spot important nodes is through betweenness centrality: It measures how much the node plays the role of a bridge. The higher the betweenness, the more the node is essential to move quickly in the graph. The top 5 are...
@@ -382,16 +493,23 @@
                     
                     <p>We can see that the network forms distinct communities with strong internal connections and weaker connections between them, implying limited collaboration among actors from different communities. These communities represent film industries and various genres present in our different countries.</p>
 
-                    <div id="image-compare" style="width: 70%; margin: auto">
-                        <img src="images/NetworkSmaller_communities.png" alt="" />
-                        <img src="images/NetworkSmaller_countries.png" alt="" />
+                    <div class="img-comp-container" width=700px height=700px>
+                        <div class="img-comp-img">
+                          <img src="images/NetworkSmaller_communities.png" width=700px height=700px>
+                        </div>
+                        <div class="img-comp-img img-comp-overlay">
+                          <img src="images/NetworkSmaller_countries.png" width=700px, height=700px>
+                        </div>
                     </div>
-                    
+                    <script>
+                     /*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
+                     initComparisons();
+                    </script>
                     <p>And remember our friends from Japan? Slide the cursor <img src="images/5678889.png" width=15px, height=15px> to revisit the country communities. Turns out, the Japanese aren't just one group; they're split into the Anime and East Asian Cinema genres.</p>
 
                     <p>Grab your director's chair; we're about to embark on the final act of our network analysis blockbuster! We're now diving into the global film scene, exploring the thrilling world of movie co-productions across different countries. </p>
 
-                    <p>Let’s have a look at which countries most commonly team up. You can change the decade that is displayed by moving the slider bellow the image.</p>
+                    <p>Let’s have a look at which countries most commonly team up. You can change the decade displayed by moving the slider below the image.</p>
 
                     <div class="row">
                         <div class="col s1"></div>
@@ -499,7 +617,11 @@
             
                 <div id="conclusion" class="section scrollspy">
                     <h2>Conclusion</h2>
-                    <p>Well, my cinematic companion, congratulations on completing this epic odyssey through the world of actors! You've now earned the prestigious title of an expert in all things actor. Should your hunger for knowledge persist, sail over to our GitHub, crafted with love (and maybe a tear or two). As the curtains close on this adventure, we bid you a fond farewell. Until our virtual paths cross again, happy coding and film buffing!</p>
+                    <p>Well, my cinematic companion, congratulations on completing this epic odyssey through the world of actors! You've now earned the prestigious title of an expert in all things actor. Should your hunger for knowledge persist, sail over to our GitHub, crafted with love (and maybe a tear or two). As the curtains close on this adventure, we bid you a fond farewell. Until our virtual paths cross again, happy coding and Merry Christmas!</p>
+            
+                    <div style="text-align: center;">
+                        <p>Valérie, Michael, Mariem, Jennifer and Adrien</p>
+                    </div>
                 </div>
 
             </div>
