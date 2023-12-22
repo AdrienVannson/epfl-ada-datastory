@@ -317,6 +317,19 @@
                     <p>Outliers like Tatum O'Neal, who remains the youngest ever Oscar winner at age 10, stand in stark contrast to the overall trend. Observing the trend lines, it's apparent that the average age of today's Oscar winners has climbed nearly a decade since the Oscars began. This pattern underscores an evolving industry paradigm that associates the pinnacle of acting achievement with a longer career trajectory.</p>
                     
                 </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title" id="current-year">1890 - 1900</span>
+                        <img class="responsive-img" id="map-timelapse" src="/epfl-ada-datastory/images/map/1890_1900.png">
+
+                        <form action="#" id="forum-year-selection-map">
+                            <p class="range-field">
+                                <input type="range" id="year-selection-map" min="0" max="11" value="0" oninput="updateMapTimelapse()"/>
+                            </p>
+                        </form>
+                    </div>
+                </div>  
             </div>
             
             
@@ -385,6 +398,24 @@
                 console.error('Error:', error);
             });
         });
+
+        function updateMapTimelapse() {
+            var i = document.getElementById("year-selection-map").value;
+            var begin = 1890 + 10 * i;
+            begin = begin.toString();
+
+            var end = 1900 + 10 * i;
+            end = end.toString();
+
+            if (end == "2010") {
+                end = "2016"
+            }
+
+            var filename = "/epfl-ada-datastory/images/map/" + begin + "_" + end + ".png";
+            document.getElementById("map-timelapse").src = filename;
+
+            document.getElementById("current-year").innerText = begin + " - " + end;
+        }
     </script>
 </body>
 </html>
