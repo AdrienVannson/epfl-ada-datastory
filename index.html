@@ -4,6 +4,7 @@
     <title>Behind the Scenes of Stardom: Decoding the Patterns in Actors' Careers</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.3/dist/css/materialize.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/image-compare-viewer/dist/image-compare-viewer.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
         #myDiv {
@@ -12,32 +13,6 @@
         }
         * {box-sizing: border-box;}
 
-        .img-comp-container {
-        position: relative;
-        height: 700px; /*should be the same height as the images*/
-        }
-
-        .img-comp-img {
-        position: absolute;
-        width: auto;
-        height: auto;
-        overflow:hidden;
-        }
-
-        .img-comp-img img {
-        display:block;
-        }
-
-        .img-comp-slider {
-        position: absolute;
-        z-index: 9;
-        cursor: ew-resize;
-        /* set the appearance of the slider: */
-        width: 5%; /* Set the width of the slider to 100% to cover the entire container */
-        height: 5%; /* Set the height of the slider to 100% to cover the entire container */
-        background: url('images/5678889.png') center center/cover; /* Use your image as the background */
-        border-radius: 50%;
-    }
         @font-face {
             font-family: 'fonttext'; /* Specify the desired font-family name */
             src: url('font/ATCArquette-Regular.ttf') format('truetype');
@@ -96,93 +71,11 @@
             display: none;
         }
 
-        #showImageButton {
-            display: block;
-            margin: auto;
-        }
         .brand-logo {
             font-family: 'fonttitle', sans-serif; /* Replace 'Arial' with your preferred font */
             margin-left: 2rem !important; /* Adjust the left margin */
         }
     </style>
-    <script>
-        function initComparisons() {
-          var x, i;
-          /*find all elements with an "overlay" class:*/
-          x = document.getElementsByClassName("img-comp-overlay");
-          for (i = 0; i < x.length; i++) {
-            /*once for each "overlay" element:
-            pass the "overlay" element as a parameter when executing the compareImages function:*/
-            compareImages(x[i]);
-          }
-          function compareImages(img) {
-            var slider, img, clicked = 0, w, h;
-            /*get the width and height of the img element*/
-            w = img.offsetWidth;
-            h = img.offsetHeight;
-            /*set the width of the img element to 50%:*/
-            img.style.width = 0 + "px";
-            /*create slider:*/
-            slider = document.createElement("DIV");
-            slider.setAttribute("class", "img-comp-slider");
-            /*insert slider*/
-            img.parentElement.insertBefore(slider, img);
-            /*position the slider in the middle:*/
-            slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
-            slider.style.left = 0 + "px";
-            /*execute a function when the mouse button is pressed:*/
-            slider.addEventListener("mousedown", slideReady);
-            /*and another function when the mouse button is released:*/
-            window.addEventListener("mouseup", slideFinish);
-            /*or touched (for touch screens:*/
-            slider.addEventListener("touchstart", slideReady);
-            /*and released (for touch screens:*/
-            window.addEventListener("touchend", slideFinish);
-            function slideReady(e) {
-              /*prevent any other actions that may occur when moving over the image:*/
-              e.preventDefault();
-              /*the slider is now clicked and ready to move:*/
-              clicked = 1;
-              /*execute a function when the slider is moved:*/
-              window.addEventListener("mousemove", slideMove);
-              window.addEventListener("touchmove", slideMove);
-            }
-            function slideFinish() {
-              /*the slider is no longer clicked:*/
-              clicked = 0;
-            }
-            function slideMove(e) {
-              var pos;
-              /*if the slider is no longer clicked, exit this function:*/
-              if (clicked == 0) return false;
-              /*get the cursor's x position:*/
-              pos = getCursorPos(e)
-              /*prevent the slider from being positioned outside the image:*/
-              if (pos < 0) pos = 0;
-              if (pos > w) pos = w;
-              /*execute a function that will resize the overlay image according to the cursor:*/
-              slide(pos);
-            }
-            function getCursorPos(e) {
-              var a, x = 0;
-              e = (e.changedTouches) ? e.changedTouches[0] : e;
-              /*get the x positions of the image:*/
-              a = img.getBoundingClientRect();
-              /*calculate the cursor's x coordinate, relative to the image:*/
-              x = e.pageX - a.left;
-              /*consider any page scrolling:*/
-              x = x - window.pageXOffset;
-              return x;
-            }
-            function slide(x) {
-              /*resize the image:*/
-              img.style.width = x + "px";
-              /*position the slider:*/
-              slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
-            }
-          }
-        }
-        </script>
 </head>
 
 <body>
@@ -270,15 +163,16 @@
                     
                     <p>Hold onto your seats! There are some intriguing differences, my friend.</p>
                     
-                    <ul>
-                        <li>Cluster 0: <strong>Steady Builders</strong>. Here, we have our steady career builders. These individuals take their sweet time, adopting a patient and persistent approach to construct their acting legacy. Their journey showcases a gradual but steady increase in movie engagements over an extended period, before gradually dissolving.</li>
+                    <ol start="0">
+                        <li><strong>Steady Builders</strong>. Here, we have our steady career builders. These individuals take their sweet time, adopting a patient and persistent approach to construct their acting legacy. Their journey showcases a gradual but steady increase in movie engagements over an extended period, before gradually dissolving.</li>
                         
-                        <li>Cluster 1: <strong>Unsuccessful career-builders</strong>. Once again, this is home to the non-successful folks who just couldn't take off. We get it; building a career is no easy feat. A few movies in, and it's a reluctant farewell.</li>
+                        <li><strong>Unsuccessful career-builders</strong>. Once again, this is home to the non-successful folks who just couldn't take off. We get it; building a career is no easy feat. A few movies in, and it's a reluctant farewell.</li>
                         
-                        <li>Cluster 2: <strong>Prolific Long-Term Performers</strong>. Now, brace yourselves for the prolific long-term performers. This elite group features heavyweights, a small number of actors boasting a significant number of movies over almost 50 years. These individuals have held their ground in the movie industry across a considerable period.</li>
+                        <li><strong>Prolific Long-Term Performers</strong>. Now, brace yourselves for the prolific long-term performers. This elite group features heavyweights, a small number of actors boasting a significant number of movies over almost 50 years. These individuals have held their ground in the movie industry across a considerable period.</li>
                         
-                        <li>Cluster 3: <strong>Swift Rise & Fall</strong>. Last but not least, we have the actors that burst onto the scene with a strong start, only to experience a progressive decline over approximately 20 years. It's a tale of ephemeral success followed by a gradual decrease in movie engagements.</li>
-                    </ul>
+                        <li><strong>Swift Rise & Fall</strong>. Last but not least, we have the actors that burst onto the scene with a strong start, only to experience a progressive decline over approximately 20 years. It's a tale of ephemeral success followed by a gradual decrease in movie engagements.</li>
+                    
+                    </0l>
                     
                     <!-- <p>Hold on, the plot thickens. Brace yourselves for a stark reality check – gender inequality is alive and kicking. A mere 9% of women in the Prolific Long-Term Performers, 17% in the Steady Builders, 32% for the Unsuccessful Career Builders and 34% for the Ephemeral Success with Progressive Fade. It's indeed a sobering moment for women in the industry. The battle for equal representation rages on.</p> -->
                     
@@ -401,11 +295,15 @@
                     
                     <p>To wrap up this genre adventure, let's take on an ambitious challenge and attempt to create the typical genre distribution of an actor in the movie industry across different time periods. To do so, we create a Markov chain of genre transitions, mapping out how our actors gracefully leap from one genre to another during their genre-hopping escapade.</p>
                     
-                    [image]
+                    <object type="text/html" data="/epfl-ada-datastory/graphs/genres-markov.html" width="100%" height="800px">
+                        <p>Unable to load the included file.</p>
+                    </object>
                     
                     <p>And now, for the grand finale, let's release our actors to whimsically wander along the currents of the Markov river, carried away by its cinematic magic. The result? The steady states, revealing distinctive genre distributions. In other words, it illustrates how actors allocate their time across various genres during different periods.</p>
                     
-                    [image]
+                    <object type="text/html" data="/epfl-ada-datastory/graphs/genres-steady-state-distribution.html" width="100%" height="400px">
+                        <p>Unable to load the included file.</p>
+                    </object>
                     
                     <!-- <p>Post-1930, the era of talking pictures, and actors had to do more than strike a pose – they had to really talk, and not just in whispers. Extended dialogues became the norm. Tough gig! This period also marked the peak of musicals. Actors weren't just speaking; they had to bring the melody. Acting became a full-body job.</p> -->
                     
@@ -432,7 +330,7 @@
                 
                     <p>One important point to observe is that Japanese actors are divided into two groups. We'll figure out the reason behind this split later in the analysis. Stay tuned!</p>
                     
-                    <p>Bonus: if you wonder who is the Australian quadruple in the bottom of the graph:</p>
+                    <p><b>Bonus:</b> if you wonder who is the Australian quadruple in the bottom of the graph:</p>
 
                     <p class="center-align">
                         <a class="btn" id="showImageButton">Click here!</a>
@@ -489,25 +387,17 @@
                     <p>Hopefully, you’ve made it through the avalanche of information. Now, let’s detect some communities!</p>
                     
                     <p>We can see that the network forms distinct communities with strong internal connections and weaker connections between them, implying limited collaboration among actors from different communities. These communities represent film industries and various genres present in our different countries.</p>
-                    
-                    <div class="img-comp-container" width=700px height=700px>
-                        <div class="img-comp-img">
-                          <img src="images/NetworkSmaller_communities.png" width=700px height=700px>
-                        </div>
-                        <div class="img-comp-img img-comp-overlay">
-                          <img src="images/NetworkSmaller_countries.png" width=700px, height=700px>
-                        </div>
+
+                    <div id="image-compare" style="width: 70%; margin: auto">
+                        <img src="images/NetworkSmaller_communities.png" alt="" />
+                        <img src="images/NetworkSmaller_countries.png" alt="" />
                     </div>
-                    <script>
-                    /*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
-                    initComparisons();
-                    </script>
                     
                     <p>And remember our friends from Japan? Slide the cursor <img src="images/5678889.png" width=15px, height=15px> to revisit the country communities. Turns out, the Japanese aren't just one group; they're split into the Anime and East Asian Cinema genres.</p>
 
                     <p>Grab your director's chair; we're about to embark on the final act of our network analysis blockbuster! We're now diving into the global film scene, exploring the thrilling world of movie co-productions across different countries. </p>
 
-                    <p>Let’s have a look at which countries most commonly team up. You can change the decade that is displayed by moving the slider bellow the image.</p>
+                    <p>Let’s have a look at which countries most commonly team up. You can change the decade displayed by moving the slider below the image.</p>
 
                     <div class="row">
                         <div class="col s1"></div>
@@ -615,7 +505,11 @@
             
                 <div id="conclusion" class="section scrollspy">
                     <h2>Conclusion</h2>
-                    <p>Well, my cinematic companion, congratulations on completing this epic odyssey through the world of actors! You've now earned the prestigious title of an expert in all things actor. Should your hunger for knowledge persist, sail over to our GitHub, crafted with love (and maybe a tear or two). As the curtains close on this adventure, we bid you a fond farewell. Until our virtual paths cross again, happy coding and film buffing!</p>
+                    <p>Well, my cinematic companion, congratulations on completing this epic odyssey through the world of actors! You've now earned the prestigious title of an expert in all things actor. Should your hunger for knowledge persist, sail over to our GitHub, crafted with love (and maybe a tear or two). As the curtains close on this adventure, we bid you a fond farewell. Until our virtual paths cross again, happy coding and Merry Christmas!</p>
+            
+                    <div style="text-align: center;">
+                        <p>Valérie, Michael, Mariem, Jennifer and Adrien</p>
+                    </div>
                 </div>
 
             </div>
@@ -641,9 +535,13 @@
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.3/dist/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/image-compare-viewer/dist/image-compare-viewer.min.js"></script>
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            const element = document.getElementById("image-compare");
+            const viewer = new ImageCompare(element).mount();
+
             M.ScrollSpy.init(document.querySelectorAll('.scrollspy'), {});
             M.Tabs.init(document.querySelectorAll('.tabs'), {});
             
