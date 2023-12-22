@@ -17,9 +17,25 @@
             /* Add additional variations if needed */
         }
 
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px; /* Adjust the height as needed */
+        }
+        .center-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        .toc-wrapper {
+            margin-left: -4rem; /* Adjust the left margin for the toc-wrapper */
+        }
         /* Add this style block or update your existing styles */
         nav.blue {
-            background: linear-gradient(to right, #ff0000, #0000ff); /* Replace these colors with your desired gradient */
+            background: linear-gradient(to right, #ad243b, #337a5c); /* Replace these colors with your desired gradient */
         }
 
         p, ul, ol {
@@ -290,14 +306,12 @@
                     <h2>Network Analysis </h2>
 
                     <p> But hey, we’ve asked ourselves a lot of questions, now here is one for you: Can you guess what this is ? </p>
-                    
-                    [insert pic of mariem's network]
-
+                        <img alt="Massive Network" src="images/ThebigNetwork.png" width="70%" class="center-image">
                     <p>That beautiful piece of art represents our network of actors where we have an edge between two actors if they starred in the same movie. Now, as you can see, it is indeed a masterpiece, but it’s not really exploitable as it is. Let’s try to untangle this ball of wool, by keeping only actors who have appeared in more than 10 movies and have starred in films from the '90s onward. </p>
 
                     <p>In the below baby network, the size of the nodes corresponds to the degree, indicating the number of connections an actor has, and the colors denote different countries. To help you with visualizing, we ran a force-directed algorithm. Have a look! </p>
 
-                    [insert pic of mariem's network with countries]
+                    <img alt="Network Countries" src="images/NetworkSmaller.png", width="100%">
 
                     <p>Crazy, isn’t it? We can observe big clusters forming for each country, with the most notable, the United States and India, waving the flags for Hollywood and Bollywood! </p>
                 
@@ -340,11 +354,11 @@
                             <b>Centrality</b><br>There are various methods to spot key players in a graph, and one of them is degree centrality. Think of it as a way to measure importance—kind of like saying, 'The more friends you've got in a social network, the bigger deal you are in that clique.
                             <br>Let's also analyze the degree centrality distribution. Most actors shared the screen with up to 100 other performers, but hold your popcorn - some influencers here co-starred with more than 400 other actors!
                         </li>
-                        <br>
+                        <img  alt="Central Actors" src="images/Degree.jpg" width="100%">
                         <li>
                             <b>Betweenness</b><br>Another way to spot important nodes is through betweenness centrality: It measures how much the node plays the role of a bridge. The higher the betweenness, the more the node is essential to move quickly in the graph. The top 5 are...
                         </li>
-                        <br>
+                        <img alt="Betweenness Actors" src="images/Betweenness.jpg"  width="100%">
                     </ol>
 
                     <p>Hopefully, you’ve made it through the avalanche of information. Now, let’s detect some communities!</p>
