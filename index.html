@@ -266,21 +266,23 @@
                     
                     <p>Woah, this has been a ride! Now, for the grand finale of our analysis, let's peek into the ultimate proof of success: the Oscars!</p>
                     
-                    <p>First, let's refresh our memory on the Oscars:</p>
+                    <!-- <p>First, let's refresh our memory on the Oscars:</p> -->
                     
-                    <p>The Academy Awards, commonly known as the Oscars, have honored the film industry's finest performances since 1929. The acting categories, designed for gender equity, include:</p>
+                    <!-- <p>The Academy Awards, commonly known as the Oscars, have honored the film industry's finest performances since 1929. The acting categories, designed for gender equity, include:</p> -->
                     
-                    <ul>
+                    <!-- <ul>
                         <li>Actor in a Leading Role: Since 1929, this category has celebrated the artistry of male actors in leading roles.</li>
                         <li>Actress in a Leading Role: Parallel to the actors, female actresses have been honored for leading roles since the inception of the Oscars.</li>
                         <li>Actor in a Supporting Role: Introduced in 1937, this category recognizes the contributions of male actors in supporting roles.</li>
                         <li>Actress in a Supporting Role: Also established in 1937, it acknowledges the talent of female actresses in supporting roles.</li>
                     </ul>
                     
-                    <p>Each category features five nominees annually, totaling 20 acting nominations each year. Winners are chosen by the Academy of Motion Picture Arts and Sciences' voting members, one for each category.</p>
+                    <p>Each category features five nominees annually, totaling 20 acting nominations each year. Winners are chosen by the Academy of Motion Picture Arts and Sciences' voting members, one for each category.</p> -->
                     
-                    <p>Now, with our newfound expertise in Oscars, let's dive into the first act of our Oscar journey. We're investigating whether an actor's gender may influence their career trajectory in terms of Oscar nominations and wins.</p>
+                    <!-- <p>Now, with our newfound expertise in Oscars, let's dive into the first act of our Oscar journey. We're investigating whether an actor's gender may influence their career trajectory in terms of Oscar nominations and wins.</p> -->
                     
+                    <p>In this annual ceremony, 20 actors are nominated across four categories: Leading Role and Supporting Role, for each gender. Our mission? Investigating whether an actor's gender may have an impact on their career trajectory in terms of Oscar nominations and wins.</p>
+
                     <object type="text/html" data="/epfl-ada-datastory/graphs/oscars-analysis-movies-before-first-nomination.html" width="100%" height="400px">
                         <p>Unable to load the included file.</p>
                     </object>
@@ -291,13 +293,13 @@
                     
                     <img class="responsive-img" alt="Number of movies per gender" src="/epfl-ada-datastory/images/oscars-analysis-total-movies.png">
                     
-                    <p>Interestingly, the data indicates that, on average, male actors appear in more films than their female counterparts, which is further reinforced by a second Mann-Whitney U test. This may contribute to a fiercer competition among male actors for those coveted Oscar nominations, considering the even playing field in annual nomination counts across gender-specific acting categories.</p>
+                    <p>Interestingly, the data indicates that, on average, male actors appear in more films than their female counterparts. This may contribute to a fiercer competition among male actors for those coveted Oscar nominations, considering the even playing field in annual nomination counts across gender-specific acting categories.</p>
                     
                     <p>Next up on our Oscar exploration: the thrilling journey from nomination to victory. Let's take a peek at the distribution of the number of nominations before an actor clinches the coveted Oscar.</p>
                     
                     <img class="responsive-img" alt="Nominations before first Oscar" src="/epfl-ada-datastory/images/oscars-analysis-nominations-before-first-oscar.png">
                     
-                    <p>The histogram paints a picture of a comparably paced journey for both male and female actors. A quick U-test reassures us that there's no significant statistical difference between the two genders. But of course, this was expected, given that male and female actors compete in separate categories with an equal number of annual nominations.</p>
+                    <p>The histogram paints a picture of a comparably paced journey for both male and female actors. This was expected, given that male and female actors compete in separate categories with an equal number of annual nominations.</p>
                     
                     <p>On more of a side note, we can notice that this distribution follows a seemingly exponential decay: most actors seem to get just one shot at the golden statue, with very few managing to secure victory after being nominated more than twice.</p>
                     
@@ -307,13 +309,13 @@
                         <p>Unable to load the included file.</p>
                     </object>
                     
-                    <p>So, the median number of movies stands at 17 for male actors and 11 for their female counterparts, suggesting a distinct pace in reaching the pinnacle of their careers. The U-test outcome adds weight to this observation, with a p-value below the 0.05 significance threshold. This pattern aligns with our earlier findings—female actors tend to nab nominations and wins earlier in their careers compared to their male counterparts, who face more competition and a longer journey to that elusive first Oscar victory.</p>
+                    <p>So, the median number of movies stands at 17 for male actors and 11 for their female counterparts, suggesting a distinct pace in reaching the pinnacle of their careers. This pattern aligns with our earlier findings - female actors tend to nab nominations and wins earlier in their careers compared to their male counterparts, who face more competition and a longer journey to that elusive first Oscar victory.</p>
                     
                     <p>Furthermore, a noteworthy insight emerges: a significant portion of actors clinch their first Oscar after a relatively modest number of movie appearances. This hints at the industry's inclination to reward promising newcomers, emphasizing the likelihood of actors winning an Oscar for their breakthrough performance rather than a later endeavor.</p>
                     
                     <p>And now, for the grand finale of our analysis! Given our earlier revelation that female actors often kick-start their careers earlier than their male counterparts, the burning question emerges: Does this early start translate into clinching that coveted Oscar at a younger age for our talented actresses?</p>
                     
-                    <object type="text/html" data="/epfl-ada-datastory/graphs/oscars-analysis-age-before-first-oscar.html" width="100%" height="400px">
+                    <!-- <object type="text/html" data="/epfl-ada-datastory/graphs/oscars-analysis-age-before-first-oscar.html" width="100%" height="400px">
                         <p>Unable to load the included file.</p>
                     </object>
                     
@@ -322,13 +324,14 @@
                     <p>This age-related twist unveils a subtle but significant gender bias in the Oscars landscape. The industry seems to favor actresses in their youthfulness and waits until actors reach their seasoned glory to bestow the coveted Oscar.</p>
                     
                     <p>But, wait, until now, we have only looked at the aggregate distributions of actor ages and movie counts. However, our data spans almost a century since the inception of the Oscars. Let’s take advantage of that and explore that temporal dimension!</p>
-                    
+                     -->
                     <img class="responsive-img" alt="Evolution of the age at first Oscar" src="/epfl-ada-datastory/images/oscars-analysis-age-oscar-evolution.png">
                     
-                    <p>While the age distribution for first-time Oscar winners spans wide, a consistent pattern emerges: male actors generally receive their first Oscar at a later age compared to their female counterparts. Over the decades, we can observe a discernible shift toward older winners, irrespective of gender. This shift may mirror a changing industry perspective that values experience and maturity. Such a shift aligns with the idea that roles with the depth and complexity to garner Oscar recognition are increasingly written for older characters.</p>
+                    <!-- <p>While the age distribution for first-time Oscar winners spans wide, a consistent pattern emerges: male actors generally receive their first Oscar at a later age compared to their female counterparts. Over the decades, we can observe a discernible shift toward older winners, irrespective of gender. This shift may mirror a changing industry perspective that values experience and maturity. Such a shift aligns with the idea that roles with the depth and complexity to garner Oscar recognition are increasingly written for older characters.</p>
                     
                     <p>Outliers like Tatum O'Neal, who remains the youngest ever Oscar winner at age 10, stand in stark contrast to the overall trend. Observing the trend lines, it's apparent that the average age of today's Oscar winners has climbed nearly a decade since the Oscars began. This pattern underscores an evolving industry paradigm that associates the pinnacle of acting achievement with a longer career trajectory.</p>
-                    
+                     -->
+                    <p>While the age distribution for first-time Oscar winners spans wide, a consistent pattern emerges: male actors generally receive their first Oscar at a later age compared to their female counterparts. Over the decades, we can observe a discernible shift toward older winners, irrespective of gender. This trend may reflect a shift in the film industry's values, favoring experience and maturity. Roles warranting Oscar recognition are increasingly tailored for older characters, and the average age of winners has risen significantly since the Oscars' inception, illustrating an evolving industry paradigm that associates the pinnacle of acting achievement with a longer career trajectory.</p>
                 </div>
             </div>
             
