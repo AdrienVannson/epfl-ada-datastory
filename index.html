@@ -6,25 +6,74 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.3/dist/css/materialize.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
-        p {
+        @font-face {
+            font-family: 'fonttext'; /* Specify the desired font-family name */
+            src: url('font/ATCArquette-Regular.ttf') format('truetype');
+            /* Add additional variations if needed */
+        }
+        @font-face {
+            font-family: 'fonttitle'; /* Specify the desired font-family name */
+            src: url('font/ATCArquette-Medium.ttf') format('truetype');
+            /* Add additional variations if needed */
+        }
+
+        /* Add this style block or update your existing styles */
+        nav.blue {
+            background: linear-gradient(to right, #ff0000, #0000ff); /* Replace these colors with your desired gradient */
+        }
+
+        body {
+            max-width: 1200px; /* Adjust the maximum width of the page */
+            margin: 0 auto; /* Center the content horizontally */
+        }
+
+        p,        ul,
+        ol {
             font-family: 'Lora', 'Times New Roman', serif;
             line-height: 1.5 !important;
-            margin: 1.875rem 0 !important;
+            margin: 1rem !important;
             font-size: 1.2rem !important;
             color: #404040 !important;
             overflow-wrap: break-word !important;
             font-weight: 400 !important;
-            
             text-align: justify;
+            max-width: 1000px; /* Adjust the maximum width based on your preference */
+            margin-left: -13rem !important; /* Adjust the left margin */
+            margin-right: -8rem !important; /* Adjust the right margin */
         }
-        
-        h1 {
-            font-size: 3em
+        p, ol, ul {
+            font-family: 'fonttext', 'Times New Roman', serif;
         }
-        
+
+        h1,
         h2 {
-            font-size: 2em
+            font-size: 3em;
+            margin-left: -13rem !important; /* Adjust the left margin */
+            margin-right: -8rem !important; /* Adjust the right margin */
+            font-family: 'fonttitle', 'Times New Roman', serif;
         }
+
+
+        img.responsive-img {
+            max-width: 100%; /* Make responsive images fill their container */
+            height: auto; /* Maintain aspect ratio */
+            margin-left: -13rem !important; /* Adjust the left margin */
+            margin-right: -8rem !important; /* Adjust the right margin */
+        }
+
+        .toc-wrapper {
+            margin-left: 19rem; /* Adjust the left margin for the toc-wrapper */
+        }
+        .nav-wrapper #nav-mobile {
+            margin-left: 0rem !important; /* Adjust the left margin */
+            margin-right: 0rem !important; /* Adjust the right margin */
+        }
+        object {
+        width: 170%;
+        margin-left: -10rem !important; /* Adjust the left margin */
+        margin-right: -8rem !important; /* Adjust the right margin */
+    }
+
     </style>
 </head>
 
@@ -34,7 +83,9 @@
             <div class="nav-wrapper">
                 <a href="#" class="brand-logo center">ADA Project</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="https://github.com/epfl-ada/ada-2023-project-lovelace/">Github</a></li>
+                    <li><a href="https://epfl-ada.github.io/teaching/fall2023/cs401/projects/"><img src="images/ada.svg" alt="GitHub" width="35" height="35"></a></li>
+                    <li><a href="https://github.com/epfl-ada/ada-2023-project-lovelace/"><img src="images/github-mark-white.png" alt="GitHub" width="30" height="30"></a></li>
+                </li>
                 </ul>
             </div>
         </nav>
@@ -66,7 +117,7 @@
                                 <div class="input-field col s12">
                                     <i class="material-icons prefix">textsms</i>
                                     <input type="text" id="autocomplete-input" class="autocomplete">
-                                    <label for="autocomplete-input">Autocomplete</label>
+                                    <label for="autocomplete-input">Find your favorite actor</label>
                                 </div>
                             </div>
                         </div>
