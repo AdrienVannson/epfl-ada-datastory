@@ -334,7 +334,20 @@
 
                     <p>Grab your director's chair; we're about to embark on the final act of our network analysis blockbuster! We're now diving into the global film scene, exploring the thrilling world of movie co-productions across different countries. </p>
 
-                    <p>Let’s have a look at which countries most commonly team up. </p>
+                    <p>Let’s have a look at which countries most commonly team up. You can change the decade that is displayed by moving the slider bellow the image.</p>
+
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title" id="current-year">1890 - 1900</span>
+                            <img class="responsive-img" id="map-timelapse" src="/epfl-ada-datastory/images/map/1890_1900.png">
+    
+                            <form action="#" id="forum-year-selection-map">
+                                <p class="range-field">
+                                    <input type="range" id="year-selection-map" min="0" max="11" value="0" oninput="updateMapTimelapse()"/>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
 
                     <p>In the world map above, the size of nodes in each country represents the number of movies filmed there, while the thickness of the edges indicates the number of movies co-produced in the connected countries.</p>
 
@@ -425,19 +438,6 @@
                     <h2>Conclusion</h2>
                     <p>Well, my cinematic companion, congratulations on completing this epic odyssey through the world of actors! You've now earned the prestigious title of an expert in all things actor. Should your hunger for knowledge persist, sail over to our GitHub, crafted with love (and maybe a tear or two). As the curtains close on this adventure, we bid you a fond farewell. Until our virtual paths cross again, happy coding and film buffing!</p>
                 </div>
-
-                <div class="card">
-                    <div class="card-content">
-                        <span class="card-title" id="current-year">1890 - 1900</span>
-                        <img class="responsive-img" id="map-timelapse" src="/epfl-ada-datastory/images/map/1890_1900.png">
-
-                        <form action="#" id="forum-year-selection-map">
-                            <p class="range-field">
-                                <input type="range" id="year-selection-map" min="0" max="11" value="0" oninput="updateMapTimelapse()"/>
-                            </p>
-                        </form>
-                    </div>
-                </div>  
             </div>
             
             <div class="col l1 hide-on-med-and-down"></div>
