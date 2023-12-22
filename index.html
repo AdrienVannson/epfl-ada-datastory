@@ -4,6 +4,7 @@
     <title>Behind the Scenes of Stardom: Decoding the Patterns in Actors' Careers</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.3/dist/css/materialize.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/image-compare-viewer/dist/image-compare-viewer.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
         * {box-sizing: border-box;}
@@ -497,6 +498,12 @@
                           <img src="images/NetworkSmaller_countries.png" width=700px, height=700px>
                         </div>
                     </div>
+
+                    <div id="image-compare" style="width: 70%; margin: auto">
+                        <img src="images/NetworkSmaller_communities.png" alt="" />
+                        <img src="images/NetworkSmaller_countries.png" alt="" />
+                    </div>
+
                     <script>
                     /*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
                     initComparisons();
@@ -640,9 +647,13 @@
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.3/dist/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/image-compare-viewer/dist/image-compare-viewer.min.js"></script>
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            const element = document.getElementById("image-compare");
+            const viewer = new ImageCompare(element).mount();
+
             M.ScrollSpy.init(document.querySelectorAll('.scrollspy'), {});
             M.Tabs.init(document.querySelectorAll('.tabs'), {});
             
