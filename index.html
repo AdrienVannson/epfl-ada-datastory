@@ -54,7 +54,7 @@
                 </div>
                 
                 <div id="career-catacterization" class="section scrollspy">
-                    <h2>Career Trajectory Characterization</h2>
+                    <h2>Career Characterization</h2>
                     
                     <p>Let's kick off our journey into the fascinating world behind the scenes of stardom with a general assessment of our beloved actors' career trajectories. To navigate this cinematic maze, we will need a clever approach to construct and compare their careers. Here's the plan: For each actor, we'll craft their profile sequence, showing the number of movies they've graced each year throughout their career.</p>
                     
@@ -288,33 +288,41 @@
 
                     <ol>
                         <li>
-                            <p><b>Sparsity</b></p>
-                            <p>The sparsity of the network is 0.0131, which is quite low. This means that the number of actual connections between the actors is much smaller compared to the total number of possible connections in the network. However, despite this low density of connections, 99.88% of our actors can reach each other through their existing connections.</p>
+                            <p><b>Sparsity</b><br>The sparsity of the network is 0.0131, which is quite low. This means that the number of actual connections between the actors is much smaller compared to the total number of possible connections in the network. However, despite this low density of connections, 99.88% of our actors can reach each other through their existing connections.</p>
                         </li>
                 
                         <li>
-                            <p><b>Shortest Path</b></p>
-                            <p>Let's search now for the shortest path between two iconic actors in this complex network, say Meryl Streep and Shahrukh Khan. The challenge is on! And the result is….</p>
+                            <p><b>Shortest Path</b><br>Let's search now for the shortest path between two iconic actors in this complex network, say Meryl Streep and Shahrukh Khan. The challenge is on! And the result is….</p>
                         </li>
                 
                         <li>
-                            <p><b>Triadic Closure</b></p>
-                            <p>Let's take a more social perspective on the network!</p>
+                            <p><b>Triadic Closure</b><br>Let's take a more social perspective on the network!</p>
                             <p>Triadic Closure, in simple terms, is like saying, "A friend of my friend is my friend." It's about actor connections: if Michael knows Valérie and Valérie knows Jennifer, how likely is it that Micheal and Jennifer also know each other? The transitivity percentage, representing this probability, is 14.40%, which is relatively low. What does this mean? Well, it suggests that actors' filming experiences are quite diverse. They aren't necessarily part of tightly connected groups where everyone has worked together. Thus, Michael has low chances of knowing Jennifer! Big loss for Michael …</p>
                         </li>
                 
                         <li>
-                            <p><b>Centrality</b><p>
-                            <p>There are various methods to spot key players in a graph, and one of them is degree centrality. Think of it as a way to measure importance—kind of like saying, 'The more friends you've got in a social network, the bigger deal you are in that clique.</p>
+                            <p><b>Centrality</b><br>There are various methods to spot key players in a graph, and one of them is degree centrality. Think of it as a way to measure importance—kind of like saying, 'The more friends you've got in a social network, the bigger deal you are in that clique.</p>
                             <p>Let's also analyze the degree centrality distribution. Most actors shared the screen with up to 100 other performers, but hold your popcorn - some influencers here co-starred with more than 400 other actors!</p>
                         </li>
                 
                         <li>
-                            <p><b>Betweenness</b></p>
-                            <p>Another way to spot important nodes is through betweenness centrality: It measures how much the node plays the role of a bridge. The higher the betweenness, the more the node is essential to move quickly in the graph. The top 5 are...</p>
+                            <p><b>Betweenness</b><br>Another way to spot important nodes is through betweenness centrality: It measures how much the node plays the role of a bridge. The higher the betweenness, the more the node is essential to move quickly in the graph. The top 5 are...</p>
                         </li>
                     </ul>
 
+                    <p>Hopefully, you’ve made it through the avalanche of information. Now, let’s detect some communities!</p>
+                    
+                    <p>We can see that the network forms distinct communities with strong internal connections and weaker connections between them, implying limited collaboration among actors from different communities. These communities represent film industries and various genres present in our different countries.</p>
+
+                    <p>And remember our friends from Japan? Click the button to revisit the country communities. Turns out, the Japanese aren't just one group; they're split into the Anime and East Asian Cinema genres.</p>
+
+                    <p>Grab your director's chair; we're about to embark on the final act of our network analysis blockbuster! We're now diving into the global film scene, exploring the thrilling world of movie co-productions across different countries. </p>
+
+                    <p>Let’s have a look at which countries most commonly team up. </p>
+
+                    <p>In the world map above, the size of nodes in each country represents the number of movies filmed there, while the thickness of the edges indicates the number of movies co-produced in the connected countries.</p>
+
+                    <p>We can see that international collaboration really took off after 1950, and the trends in co-production are constantly changing. So the landscape of co-production might change in the next few years. Keep an eye on it!</p>
 
                 </div>
 
@@ -392,6 +400,10 @@
                 </div>
             </div>
             
+            <div id="conclusion" class="section scrollspy">
+                <h2>Conclusion</h2>
+                <p>Well, my cinematic companion, congratulations on completing this epic odyssey through the world of actors! You've now earned the prestigious title of an expert in all things actor. Should your hunger for knowledge persist, sail over to our GitHub, crafted with love (and maybe a tear or two). As the curtains close on this adventure, we bid you a fond farewell. Until our virtual paths cross again, happy coding and film buffing!</p>
+            </div>
             
             <div class="col l1 hide-on-med-and-down"></div>
             
@@ -401,10 +413,11 @@
                     
                     <ul class="section table-of-contents" style="list-style-type: none;">
                         <li><a href="#introduction">Introduction</a></li>
-                        <li><a href="#career-catacterization">Career Trajectory Characterization</a></li>
+                        <li><a href="#career-catacterization">Career Characterization</a></li>
                         <li><a href="#genre-exploration">Genres Exploration</a></li>
                         <li><a href="#network-analysis">Network Analysis</a></li>
                         <li><a href="#oscars">Oscars Analysis</a></li>
+                        <li><a href="#conclusion">Conclusion</a></li>
                     </ul>
                     
                 </div>
