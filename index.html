@@ -39,6 +39,15 @@
             font-size: 3em;
             font-family: 'fonttitle', 'Times New Roman', serif;
         }
+
+        #hidden-image {
+            display: none;
+        }
+
+        #showImageButton {
+            display: block;
+            margin: auto;
+        }
     </style>
 </head>
 
@@ -296,9 +305,21 @@
                 
                     <p>One important point to observe is that Japanese actors are divided into two groups. We'll figure out the reason behind this split later in the analysis. Stay tuned!</p>
                     
-                    <p>Bonus: if you wonder who is the Australian quadruple in the bottom of the graph: Click here!</p>
-                    
-                    [add button for the Aussies]
+                    <p>Bonus: if you wonder who is the Australian quadruple in the bottom of the graph:  <button id="showImageButton">Click here!</button></p></p>
+
+                    <!-- <button id="showImageButton">Show Image</button> -->
+
+                    <div id="hidden-image">
+                        <img src="images/Aussies.jpg" alt="Displayed on button click" width="360" height="210">
+                    </div>
+
+                    <script>
+                        document.getElementById('showImageButton').addEventListener('click', function() {
+                            // Toggle the display of the hidden image
+                            var hiddenImage = document.getElementById('hidden-image');
+                            hiddenImage.style.display = (hiddenImage.style.display === 'none' || hiddenImage.style.display === '') ? 'block' : 'none';
+                        });
+                    </script>
 
                     <p>Next, let me teach you how to analyze a network, but be prepared to be bombarded with information!</p>
 
