@@ -59,11 +59,6 @@
         #hidden-image {
             display: none;
         }
-
-        #showImageButton {
-            display: block;
-            margin: auto;
-        }
     </style>
 </head>
 
@@ -325,7 +320,11 @@
                 
                     <p>One important point to observe is that Japanese actors are divided into two groups. We'll figure out the reason behind this split later in the analysis. Stay tuned!</p>
                     
-                    <p>Bonus: if you wonder who is the Australian quadruple in the bottom of the graph:  <button id="showImageButton">Click here!</button></p></p>
+                    <p>Bonus: if you wonder who is the Australian quadruple in the bottom of the graph:</p>
+
+                    <p class="center-align">
+                        <a class="btn" id="showImageButton">Click here!</a>
+                    </p>
 
                     <!-- <button id="showImageButton">Show Image</button> -->
 
@@ -377,17 +376,23 @@
 
                     <p>Let’s have a look at which countries most commonly team up. You can change the decade that is displayed by moving the slider bellow the image.</p>
 
-                    <div class="card">
-                        <div class="card-content">
-                            <span class="card-title" id="current-year">1890 - 1900</span>
-                            <img class="responsive-img" id="map-timelapse" src="/epfl-ada-datastory/images/map/1890_1900.png">
-    
-                            <form action="#" id="forum-year-selection-map">
-                                <p class="range-field">
-                                    <input type="range" id="year-selection-map" min="0" max="11" value="0" oninput="updateMapTimelapse()"/>
-                                </p>
-                            </form>
+                    <div class="row">
+                        <div class="col s1"></div>
+                        <div class="col s10">
+                            <div class="card">
+                                <div class="card-content">
+                                    <span class="card-title" id="current-year">1890 - 1900</span>
+                                    <img class="responsive-img" id="map-timelapse" src="/epfl-ada-datastory/images/map/1890_1900.png">
+            
+                                    <form action="#" id="forum-year-selection-map">
+                                        <p class="range-field">
+                                            <input type="range" id="year-selection-map" min="0" max="11" value="0" oninput="updateMapTimelapse()"/>
+                                        </p>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
+                        <div class="col s1"></div>
                     </div>
 
                     <p>In the world map above, the size of nodes in each country represents the number of movies filmed there, while the thickness of the edges indicates the number of movies co-produced in the connected countries.</p>
